@@ -20,7 +20,7 @@ data_path2 = 'data/'
 colors = ['#363537', '#fcfcfc', '#bee9e8', '#62b6cb', '#1b4965', '#ffef84', '#c3d37a', '#86b66f', '#0c7c59']
 
 
-pct_data = pd.read_csv(data_path + 'renewables_percent_timeseries.csv')
+pct_data = pd.read_csv(data_path2 + 'renewables_percent_timeseries.csv')
 pct_data = pct_data.sort_values(by='Country')
 
 country_codes = [i for i in pct_data['Country Code'].unique()]
@@ -95,17 +95,20 @@ app.layout = html.Div([
             html.Div([
                 html.Div([], id='top_eu_1', className='col top_eu'),
                 html.Div([], id='top_eu_2', className='col top_eu'),
-                html.Div([], id='top_eu_3', className='col top_eu')
-            ],className='row top_eu_row'),
-            html.Div([
+                html.Div([], id='top_eu_3', className='col top_eu'),
                 html.Div([], id='top_not_1', className='col top_eu'),
                 html.Div([], id='top_not_2', className='col top_eu'),
-                html.Div([
-                    html.P("Some notes", className='small')
-                ], className='col top_eu placeholder'),
+
+            ],className='row top_eu_row'),
+            html.Div([
+                #html.Div([], id='top_not_1', className='col top_eu'),
+                #html.Div([], id='top_not_2', className='col top_eu'),
+                #html.Div([
+                #    html.P("Some notes", className='small')
+                #], className='col top_eu placeholder'),
             ],className='row')
             ],
-            className='col-7 top_perf_container'),
+            className='col top_perf_container'),
         html.Div([
             html.Div([
                 html.P("Some text here anbout the sliders")
@@ -135,9 +138,9 @@ app.layout = html.Div([
             ],
             className='col ranking_container'),
         html.Div([
-            html.H3("Choropleth map? "),
+            html.H3("Choropleth map? Or Scatter vs GDP"),
             ],
-            className='col placeholder'),
+            className='col'),
     ],
     className='row'),
 
@@ -221,19 +224,21 @@ def getTopPerforming(year_value):
 
     fig_bar = go.Figure()
     sorted_bar = percent_timeseries.loc[:,['Country', str(year_value)]].sort_values(by=str(year_value), ascending=False)
+
     fig_bar.add_trace(dict(type='bar',
                      x=sorted_bar['Country'],
                      y=sorted_bar[str(year_value)],
                      name=str(year_value),
                      showlegend=False,
                      visible=True,
-                     marker_color=colors[4]
+                     marker_color=colors[4],
                     )
                )
-
+#
     fig_bar.update_layout(dict(title=dict(text='Percentage of consumption using renewables', x=.5),
                     yaxis=dict(range=[0,100]),
                     paper_bgcolor=colors[1],
+                    plot_bgcolor='#e9f6f6',
                     margin=dict(r=10, t=50, l=10)
 
                   ))
