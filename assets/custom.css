@@ -1,5 +1,35 @@
+
+:root {
+    --bg-color: #fcfcfc;
+    --bg-secondary-color: #f9f9f9;
+    --color-primary: #3f8098;
+    --color-lightGrey: #d2d6dd;
+    --color-grey: #747681;
+    --color-darkGrey: #3f4144;
+    --color-error: #d43939;
+    --color-success: #0c7c59;
+    --grid-maxWidth: 120rem;
+    --grid-gutter: 2rem;
+    --font-size: 1.6rem;
+    --font-color: #363537;
+
+    --color1: #363537;
+    --color2: #fcfcfc;
+    --color3: #bee9e8;
+    --color4: #62b6cb;
+    --color5: #3f8098;
+    --color6: #1b4965;
+    --color7: #ffef84;
+    --color8: #c3d37a;
+    --color9: #86b66f;
+    --color10: #0c7c59;
+}
+
+body {
+    background-color: var(--color3);
+}
 .outer {
-    margin-top: .5em;
+    margin-top: 2em;
 }
 .hero {
     margin: -10px -20px; /*1em .25em 5em;*/
@@ -23,7 +53,8 @@
     /*border: 1px solid blue;*/
     padding: 1em;
     min-height: 30em;
-    background-image: url('/assets/head.png');
+    background-color: var(--bg-color);
+    background-image: url('/assets/head2.png');
     background-position: center right;
     background-size: contain;
     background-repeat: no-repeat;
@@ -38,14 +69,20 @@
 
 .top_perf_container {
     z-index: 10;
+    border: 1px solid red;
+    min-width: 500px;
 }
 
 .top_eu {
-    padding: 1em;
+    padding: 0em;
+    margin: 0em;
     min-height: 8em;
     z-index: 10
 }
 
+.top_eu_row {
+    margin-bottom: 2em;
+}
 .top_perf {
     /*border: 1px solid cyan;*/
     text-align: center;
@@ -66,10 +103,38 @@
     height: 80px;
     margin: 0 auto;
     padding: 0;
-    border-radius: 50%;
+    border-radius: 5%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    border: 2px solid white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /*border: 2px solid white;*/
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/**
+Style input components
+*/
+
+.rc-slider-tooltip {
+    z-index: 10;
+}
+.rc-slider-tooltip-inner {
+    background-color: var(--color5);
+    color: var(--color2);
+    padding: 1em 1em 2em 1em;
+    font-weight: bold;
+}
+
+.rc-slider-tooltip-placement-top .rc-slider-tooltip-arrow,
+.rc-slider-tooltip-arrow {
+    border-top-color: var(--color5);
+
+}
+
+.rc-slider-track {
+    background-color: var(--color3);
+}
+
+.rc-slider-dot-active, .rc-slider-handle {
+    border-color: var(--color4);
 }

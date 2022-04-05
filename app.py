@@ -48,9 +48,12 @@ dropdown_cc = dcc.Dropdown(
 slider_years = dcc.Slider(
        id='slider_years',
        value=2020,
+       min=2004,
+       max=2020,
        marks={str(i): '{}'.format(str(i)) for i in
               ts_years},
-       step=1
+       step=5,
+       tooltip={"placement": "top", "always_visible": True}
    )
 
 ######## 
@@ -73,7 +76,8 @@ app.layout = html.Div([
         
     ], 
     className='row hero'),
-
+    
+    ########## First Row ##########
     html.Div([
         html.Div([
             html.H2(["Top Performing Countries: ",html.Span(id='title_top_year')]),
@@ -81,16 +85,33 @@ app.layout = html.Div([
                 html.Div([], id='top_eu_1', className='col top_eu'),
                 html.Div([], id='top_eu_2', className='col top_eu'),
                 html.Div([], id='top_eu_3', className='col top_eu')
-            ],className='row'),
+            ],className='row top_eu_row'),
             html.Div([
-                html.Div([], id='top_not_1', className='col-4 top_eu'),
-                html.Div([], id='top_not_2', className='col-4 top_eu'),
+                html.Div([], id='top_not_1', className='col top_eu'),
+                html.Div([], id='top_not_2', className='col top_eu'),
                 html.Div([
                     html.P("Some notes", className='small')
-                ], className='col-4 top_eu placeholder'),
+                ], className='col top_eu placeholder'),
             ],className='row')
             ],
             className='col-7 top_perf_container'),
+        html.Div([
+            html.P("")
+            ],
+            className='col placeholder'),
+    ],
+    className='row'),
+    html.Div([
+            slider_years
+        ],
+        className='holder'),
+    ########## Second Row ##########
+    html.Div([
+        html.Div([
+            html.H3("Performance of All Countries: "),
+            html.Div([],className='row'),
+            ],
+            className='col ranking_container placeholder'),
         html.Div([
             html.P("")
             ],
@@ -110,10 +131,6 @@ app.layout = html.Div([
 
     html.Div([
         html.Label('Placeholder Div'),
-        html.Div([
-            slider_years
-        ],
-        className='holder')
     ], className=''),
     ],
     
@@ -138,8 +155,6 @@ app.layout = html.Div([
     
 )
 def getTopPerforming(year_value):
-    print('foooo')
-    print(year_value)
 
     perf_by_year = percent_timeseries.loc[:,['Country', str(year_value), 'Country Code']].sort_values(by=str(year_value), ascending=False).reset_index(drop=True)
     
