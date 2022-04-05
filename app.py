@@ -1,4 +1,3 @@
-from tkinter import Y
 import dash
 from dash import dash_table, html, dcc
 
