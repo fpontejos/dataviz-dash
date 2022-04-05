@@ -1,0 +1,75 @@
+.outer {
+    margin-top: .5em;
+}
+.hero {
+    margin: -10px -20px; /*1em .25em 5em;*/
+    /*border: 2px solid cyan;*/
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.hero-title {
+    /*border: 1px solid red;*/
+    padding: 4em 20px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    /*text-align: center;*/
+    z-index: 200;
+}
+
+.hero-bg {
+    /*border: 1px solid blue;*/
+    padding: 1em;
+    min-height: 30em;
+    background-image: url('/assets/head.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: flex;
+    right: 0em;
+    width: 30em;
+    z-index: 0;
+
+
+}
+
+.top_perf_container {
+    z-index: 10;
+}
+
+.top_eu {
+    padding: 1em;
+    min-height: 8em;
+    z-index: 10
+}
+
+.top_perf {
+    /*border: 1px solid cyan;*/
+    text-align: center;
+
+}
+
+.placeholder {
+    border: 1px solid orange;
+    z-index: 10
+}
+
+.small {
+    font-size: smaller;
+}
+
+.country_flag {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: 2px solid white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
