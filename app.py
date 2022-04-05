@@ -1,3 +1,4 @@
+from tkinter import Y
 import dash
 from dash import dash_table, html, dcc
 
@@ -17,12 +18,16 @@ import plotly.graph_objs as go
 #data_path = 'https://raw.githubusercontent.com/fpontejos/ifood-team13/main/data/food_recipes.csv'
 #data_path2 = 'data/food_recipes.csv'
 
+colors = ['#363537', '#fcfcfc', '#bee9e8', '#62b6cb', '#1b4965', '#ffef84', '#c3d37a', '#86b66f', '#0c7c59']
+
 data_path = 'data/'
 
 pct_data = pd.read_csv(data_path + 'renewables_percent_timeseries.csv')
 pct_data = pct_data.sort_values(by='Country')
 
 country_codes = [i for i in pct_data['Country Code'].unique()]
+country_names = [i for i in pct_data['Country'].unique()]
+
 ts_years = [str(i) for i in range(2004, 2021)]
 
 percent_timeseries = pct_data.loc[pct_data['SIEC Code']=='RA000']\
@@ -55,6 +60,7 @@ slider_years = dcc.Slider(
        step=5,
        tooltip={"placement": "top", "always_visible": True}
    )
+
 
 ######## 
 
@@ -96,9 +102,11 @@ app.layout = html.Div([
             ],
             className='col-7 top_perf_container'),
         html.Div([
-            html.P("")
+            html.Div([
+                html.P("Some text here anbout the sliders")
+            ], className="notes"),
             ],
-            className='col placeholder'),
+            className='col toprow_container'),
     ],
     className='row'),
     html.Div([
@@ -109,11 +117,14 @@ app.layout = html.Div([
     html.Div([
         html.Div([
             html.H3("Performance of All Countries: "),
-            html.Div([],className='row'),
+            html.Div([
+                dcc.Graph(id='top_bar', style={'width': '95%', 'margin': '0 auto'}),
+                #html.Div([], id='top_bar', className='placeholder'),
+            ],className='row'),
             ],
-            className='col ranking_container placeholder'),
+            className='col ranking_container'),
         html.Div([
-            html.P("")
+            html.H3("Choropleth map? "),
             ],
             className='col placeholder'),
     ],
@@ -151,6 +162,7 @@ app.layout = html.Div([
     Output('top_eu_3', 'children'),
     Output('top_not_1', 'children'),
     Output('top_not_2', 'children'),
+    Output('top_bar', 'figure'),
     Input('slider_years', 'value'),
     
 )
@@ -173,13 +185,44 @@ def getTopPerforming(year_value):
             )
             ])
 
+    fig_bar = go.Figure()
+    sorted_bar = percent_timeseries.loc[:,['Country', str(year_value)]].sort_values(by=str(year_value), ascending=False)
+    fig_bar.add_trace(dict(type='bar',
+                     x=sorted_bar['Country'],
+                     y=sorted_bar[str(year_value)],
+                     name=str(year_value),
+                     showlegend=False,
+                     visible=True,
+                     marker_color=colors[4]
+                    )
+               )
+
+    fig_bar.update_layout(dict(title=dict(text='Percentage of consumption using renewables', x=.5),
+                    yaxis=dict(range=[0,100]),
+                    paper_bgcolor=colors[1],
+                    margin=dict(r=10, t=50, l=10)
+
+                  ))
+    fig_bar.update_xaxes(tickangle=270)
+
+    fig_bar.add_annotation(text="Year "+str(year_value),
+                  xref="paper", yref="paper",
+                  x=.99, y=.99, showarrow=False, 
+                  font=dict(
+                    color=colors[4],
+                    size=20
+                ))
+
+
     return [year_value,
         year_value, 
         top_res_return[0], 
         top_res_return[1], 
         top_res_return[2], 
         top_res_return[3], 
-        top_res_return[4], 
+        top_res_return[4],
+        #go.Figure(data=data_bar, layout=layout_bar)
+        fig_bar
         ]
 
 

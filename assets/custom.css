@@ -30,6 +30,7 @@ body {
 }
 .outer {
     margin-top: 2em;
+    /*background-color: #edfafa;*/
 }
 .hero {
     margin: -10px -20px; /*1em .25em 5em;*/
@@ -53,7 +54,6 @@ body {
     /*border: 1px solid blue;*/
     padding: 1em;
     min-height: 30em;
-    background-color: var(--bg-color);
     background-image: url('/assets/head2.png');
     background-position: center right;
     background-size: contain;
@@ -66,11 +66,21 @@ body {
 
 
 }
+.toprow_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.notes {
+    margin: 0 0 1em 0;
+    font-size: small;
+
+}
 
 .top_perf_container {
     z-index: 10;
     border: 1px solid red;
-    min-width: 500px;
+    min-width: 300px;
 }
 
 .top_eu {
