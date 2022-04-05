@@ -15,12 +15,11 @@ import plotly.graph_objs as go
 ## Wrangle the data
 ####################################################################################################################
 
-#data_path = 'https://raw.githubusercontent.com/fpontejos/ifood-team13/main/data/food_recipes.csv'
-#data_path2 = 'data/food_recipes.csv'
+data_path = 'https://raw.githubusercontent.com/fpontejos/dataviz-dash/main/data/'
+data_path2 = 'data/'
 
 colors = ['#363537', '#fcfcfc', '#bee9e8', '#62b6cb', '#1b4965', '#ffef84', '#c3d37a', '#86b66f', '#0c7c59']
 
-data_path = 'data/'
 
 pct_data = pd.read_csv(data_path + 'renewables_percent_timeseries.csv')
 pct_data = pct_data.sort_values(by='Country')
