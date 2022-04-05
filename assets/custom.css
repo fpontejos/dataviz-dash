@@ -32,6 +32,10 @@ body {
     margin-top: 2em;
     /*background-color: #edfafa;*/
 }
+
+.card {
+    margin: 1em 0;
+}
 .hero {
     margin: -10px -20px; /*1em .25em 5em;*/
     /*border: 2px solid cyan;*/
@@ -79,7 +83,6 @@ body {
 
 .top_perf_container {
     z-index: 10;
-    border: 1px solid red;
     min-width: 300px;
 }
 

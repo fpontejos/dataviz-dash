@@ -72,6 +72,12 @@ app = dash.Dash(__name__)
 server = app.server
 
 app.layout = html.Div([
+
+
+    html.Div([
+
+    ########## Hero Row ##########
+
     html.Div([
         html.Div(className='hero-bg'),
 
@@ -82,8 +88,9 @@ app.layout = html.Div([
         
     ], 
     className='row hero'),
-    
-    ########## First Row ##########
+
+
+     ########## First Row ##########
     html.Div([
         html.Div([
             html.H2(["Top Performing Countries: ",html.Span(id='title_top_year')]),
@@ -109,10 +116,16 @@ app.layout = html.Div([
             className='col toprow_container'),
     ],
     className='row'),
+
+     ########## Slider Row ##########
+
     html.Div([
-            slider_years
-        ],
-        className='holder'),
+        html.Div([slider_years],className='col holder'),
+    ], className='row'),
+        
+
+
+
     ########## Second Row ##########
     html.Div([
         html.Div([
@@ -131,21 +144,45 @@ app.layout = html.Div([
     className='row'),
 
 
-    html.H2('Placeholder h2'),
-    dropdown_cc, 
+    ], className='card'),
 
-    #prop options display
-    html.Div([
-        html.Label('Placeholder Div'),
-        html.Div(id='placeholder_title',className='holder')
-    ], className=''),
 
+
+
+
+    ########## Third Row ##########
     html.Div([
-        html.Label('Placeholder Div'),
-    ], className=''),
-    ],
-    
-    className="container card outer")
+
+        html.Div([
+            html.Div([
+                html.H3("Which Renewables? "),
+                html.Div([
+                    
+                ],className='row'),
+                ],
+                className='col ranking_container'),
+            html.Div([
+                html.H3("Placeholder? "),
+                ],
+                className='col placeholder'),
+        ],
+        className='row'),
+
+    ], className='card'),
+
+
+
+
+
+
+
+
+
+
+
+], className='outer container')
+
+
 
 
 
@@ -155,7 +192,6 @@ app.layout = html.Div([
 
 
 @app.callback(
-    Output('placeholder_title', 'children'),
     Output('title_top_year', 'children'),
     Output('top_eu_1', 'children'),
     Output('top_eu_2', 'children'),
@@ -214,7 +250,7 @@ def getTopPerforming(year_value):
                 ))
 
 
-    return [year_value,
+    return [
         year_value, 
         top_res_return[0], 
         top_res_return[1], 
