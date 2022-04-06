@@ -15,8 +15,8 @@ from scipy.fftpack import cc_diff
 ## Wrangle the data
 ####################################################################################################################
 
-data_path2 = 'https://raw.githubusercontent.com/fpontejos/dataviz-dash/main/data/'
-data_path = 'data/'
+data_path = 'https://raw.githubusercontent.com/fpontejos/dataviz-dash/main/data/'
+data_path2 = 'data/'
 
 colors = ['#363537', '#fcfcfc', '#bee9e8', '#62b6cb', '#1b4965', '#ffef84', '#c3d37a', '#86b66f', '#0c7c59']
 
