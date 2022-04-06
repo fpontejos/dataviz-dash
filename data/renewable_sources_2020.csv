@@ -1,266 +1,828 @@
-Country Code,SIEC Code,Consumption in KTOE,SIEC
-AT,R5110-5150_W6000RI,5059.3,Primary solid biofuels
-BE,R5110-5150_W6000RI,1842.7,Primary solid biofuels
-BG,R5110-5150_W6000RI,1737.1,Primary solid biofuels
-CY,R5110-5150_W6000RI,27.4,Primary solid biofuels
-CZ,R5110-5150_W6000RI,3670.0,Primary solid biofuels
-DE,R5110-5150_W6000RI,13564.7,Primary solid biofuels
-DK,R5110-5150_W6000RI,2992.8,Primary solid biofuels
-EE,R5110-5150_W6000RI,1747.4,Primary solid biofuels
-EL,R5110-5150_W6000RI,794.3,Primary solid biofuels
-ES,R5110-5150_W6000RI,5053.7,Primary solid biofuels
-FI,R5110-5150_W6000RI,8451.8,Primary solid biofuels
-FR,R5110-5150_W6000RI,10088.2,Primary solid biofuels
-HR,R5110-5150_W6000RI,1559.5,Primary solid biofuels
-HU,R5110-5150_W6000RI,2074.6,Primary solid biofuels
-IE,R5110-5150_W6000RI,283.2,Primary solid biofuels
-IT,R5110-5150_W6000RI,8378.1,Primary solid biofuels
-LT,R5110-5150_W6000RI,1431.1,Primary solid biofuels
-LU,R5110-5150_W6000RI,187.0,Primary solid biofuels
-LV,R5110-5150_W6000RI,2817.2,Primary solid biofuels
-MT,R5110-5150_W6000RI,1.4,Primary solid biofuels
-NL,R5110-5150_W6000RI,2533.8,Primary solid biofuels
-PL,R5110-5150_W6000RI,9615.0,Primary solid biofuels
-PT,R5110-5150_W6000RI,2959.6,Primary solid biofuels
-RO,R5110-5150_W6000RI,3572.3,Primary solid biofuels
-SE,R5110-5150_W6000RI,9951.5,Primary solid biofuels
-SI,R5110-5150_W6000RI,529.0,Primary solid biofuels
-SK,R5110-5150_W6000RI,1322.8,Primary solid biofuels
-AT,R5200,858.5,Liquid biofuels
-BE,R5200,1131.1,Liquid biofuels
-BG,R5200,219.9,Liquid biofuels
-CY,R5200,27.3,Liquid biofuels
-CZ,R5200,587.8,Liquid biofuels
-DE,R5200,5814.0,Liquid biofuels
-DK,R5200,310.3,Liquid biofuels
-EE,R5200,38.9,Liquid biofuels
-EL,R5200,289.8,Liquid biofuels
-ES,R5200,3384.7,Liquid biofuels
-FI,R5200,492.1,Liquid biofuels
-FR,R5200,3473.8,Liquid biofuels
-HR,R5200,71.1,Liquid biofuels
-HU,R5200,642.1,Liquid biofuels
-IE,R5200,190.7,Liquid biofuels
-IT,R5200,2797.5,Liquid biofuels
-LT,R5200,250.5,Liquid biofuels
-LU,R5200,125.0,Liquid biofuels
-LV,R5200,116.0,Liquid biofuels
-MT,R5200,14.6,Liquid biofuels
-NL,R5200,2166.2,Liquid biofuels
-PL,R5200,1343.0,Liquid biofuels
-PT,R5200,320.8,Liquid biofuels
-RO,R5200,499.6,Liquid biofuels
-SE,R5200,2105.0,Liquid biofuels
-SI,R5200,96.2,Liquid biofuels
-SK,R5200,283.8,Liquid biofuels
-AT,R5300,210.6,Biogases
-BE,R5300,243.9,Biogases
-BG,R5300,53.3,Biogases
-CY,R5300,13.3,Biogases
-CZ,R5300,594.5,Biogases
-DE,R5300,7744.8,Biogases
-DK,R5300,510.6,Biogases
-EE,R5300,19.9,Biogases
-EL,R5300,135.3,Biogases
-ES,R5300,323.4,Biogases
-FI,R5300,169.0,Biogases
-FR,R5300,1133.8,Biogases
-HR,R5300,83.1,Biogases
-HU,R5300,89.4,Biogases
-IE,R5300,52.3,Biogases
-IT,R5300,2017.9,Biogases
-LT,R5300,38.6,Biogases
-LU,R5300,18.0,Biogases
-LV,R5300,80.2,Biogases
-MT,R5300,1.3,Biogases
-NL,R5300,415.7,Biogases
-PL,R5300,322.4,Biogases
-PT,R5300,82.7,Biogases
-RO,R5300,18.5,Biogases
-SE,R5300,185.8,Biogases
-SI,R5300,27.0,Biogases
-SK,R5300,130.9,Biogases
-AT,RA100,3611.2,Hydro
-BE,RA100,22.9,Hydro
-BG,RA100,242.5,Hydro
-CZ,RA100,184.3,Hydro
-DE,RA100,1575.4,Hydro
-DK,RA100,1.5,Hydro
-EE,RA100,2.6,Hydro
-EL,RA100,283.9,Hydro
-ES,RA100,2623.1,Hydro
-FI,RA100,1365.7,Hydro
-FR,RA100,5336.4,Hydro
-HR,RA100,486.9,Hydro
-HU,RA100,21.0,Hydro
-IE,RA100,80.2,Hydro
-IT,RA100,4088.7,Hydro
-LT,RA100,25.8,Hydro
-LU,RA100,7.9,Hydro
-LV,RA100,223.8,Hydro
-NL,RA100,4.0,Hydro
-PL,RA100,182.1,Hydro
-PT,RA100,1038.9,Hydro
-RO,RA100,1322.5,Hydro
-SE,RA100,6224.3,Hydro
-SI,RA100,424.3,Hydro
-SK,RA100,396.6,Hydro
-AT,RA200,36.4,Geothermal
-BE,RA200,3.6,Geothermal
-BG,RA200,35.7,Geothermal
-DE,RA200,361.9,Geothermal
-DK,RA200,1.1,Geothermal
-EL,RA200,5.6,Geothermal
-ES,RA200,0.2,Geothermal
-FR,RA200,477.2,Geothermal
-HR,RA200,55.6,Geothermal
-HU,RA200,149.9,Geothermal
-IT,RA200,5342.9,Geothermal
-NL,RA200,147.7,Geothermal
-PL,RA200,25.6,Geothermal
-PT,RA200,199.2,Geothermal
-RO,RA200,21.3,Geothermal
-SI,RA200,11.4,Geothermal
-SK,RA200,9.4,Geothermal
-AT,RA300,584.0,Wind
-BE,RA300,1097.5,Wind
-BG,RA300,127.0,Wind
-CY,RA300,20.7,Wind
-CZ,RA300,60.1,Wind
-DE,RA300,11358.7,Wind
-DK,RA300,1404.1,Wind
-EE,RA300,72.6,Wind
-EL,RA300,800.5,Wind
-ES,RA300,4853.3,Wind
-FI,RA300,682.6,Wind
-FR,RA300,3421.5,Wind
-HR,RA300,148.0,Wind
-HU,RA300,56.3,Wind
-IE,RA300,993.1,Wind
-IT,RA300,1613.2,Wind
-LT,RA300,133.4,Wind
-LU,RA300,30.2,Wind
-LV,RA300,15.2,Wind
-MT,RA300,0.0,Wind
-NL,RA300,1318.9,Wind
-PL,RA300,1358.6,Wind
-PT,RA300,1057.5,Wind
-RO,RA300,597.2,Wind
-SE,RA300,2366.8,Wind
-SI,RA300,0.5,Wind
-SK,RA300,0.3,Wind
-AT,RA410,182.0,Solar thermal
-BE,RA410,27.0,Solar thermal
-BG,RA410,27.4,Solar thermal
-CY,RA410,74.4,Solar thermal
-CZ,RA410,18.8,Solar thermal
-DE,RA410,748.7,Solar thermal
-DK,RA410,78.2,Solar thermal
-EL,RA410,293.1,Solar thermal
-ES,RA410,2288.0,Solar thermal
-FI,RA410,2.4,Solar thermal
-FR,RA410,194.6,Solar thermal
-HR,RA410,16.3,Solar thermal
-HU,RA410,15.0,Solar thermal
-IE,RA410,14.1,Solar thermal
-IT,RA410,236.4,Solar thermal
-LU,RA410,2.6,Solar thermal
-LV,RA410,1.0,Solar thermal
-MT,RA410,5.1,Solar thermal
-NL,RA410,28.1,Solar thermal
-PL,RA410,80.1,Solar thermal
-PT,RA410,100.7,Solar thermal
-RO,RA410,0.8,Solar thermal
-SE,RA410,10.4,Solar thermal
-SI,RA410,10.3,Solar thermal
-SK,RA410,8.1,Solar thermal
-AT,RA420,175.7,Solar photovoltaic
-BE,RA420,439.0,Solar photovoltaic
-BG,RA420,127.3,Solar photovoltaic
-CY,RA420,25.4,Solar photovoltaic
-CZ,RA420,196.6,Solar photovoltaic
-DE,RA420,4182.4,Solar photovoltaic
-DK,RA420,101.5,Solar photovoltaic
-EE,RA420,21.1,Solar photovoltaic
-EL,RA420,382.4,Solar photovoltaic
-ES,RA420,1347.8,Solar photovoltaic
-FI,RA420,18.8,Solar photovoltaic
-FR,RA420,1152.1,Solar photovoltaic
-HR,RA420,8.2,Solar photovoltaic
-HU,RA420,211.4,Solar photovoltaic
-IE,RA420,5.5,Solar photovoltaic
-IT,RA420,2144.6,Solar photovoltaic
-LT,RA420,11.1,Solar photovoltaic
-LU,RA420,13.9,Solar photovoltaic
-LV,RA420,0.4,Solar photovoltaic
-MT,RA420,20.4,Solar photovoltaic
-NL,RA420,753.7,Solar photovoltaic
-PL,RA420,168.4,Solar photovoltaic
-PT,RA420,147.5,Solar photovoltaic
-RO,RA420,149.0,Solar photovoltaic
-SE,RA420,90.4,Solar photovoltaic
-SI,RA420,31.7,Solar photovoltaic
-SK,RA420,57.0,Solar photovoltaic
-AT,RA500_5160,11.7,Other renewable energies
-BE,RA500_5160,22.7,Other renewable energies
-BG,RA500_5160,3.5,Other renewable energies
-CY,RA500_5160,10.2,Other renewable energies
-DE,RA500_5160,126.1,Other renewable energies
-EL,RA500_5160,39.8,Other renewable energies
-ES,RA500_5160,2.3,Other renewable energies
-FR,RA500_5160,41.4,Other renewable energies
-HR,RA500_5160,9.1,Other renewable energies
-IT,RA500_5160,57.9,Other renewable energies
-LT,RA500_5160,4.7,Other renewable energies
-LV,RA500_5160,3.3,Other renewable energies
-NL,RA500_5160,6.4,Other renewable energies
-PT,RA500_5160,14.0,Other renewable energies
-SK,RA500_5160,0.7,Other renewable energies
-AT,RA600,403.3,Ambient heat (heat pumps)
-BE,RA600,130.8,Ambient heat (heat pumps)
-BG,RA600,111.6,Ambient heat (heat pumps)
-CY,RA600,51.2,Ambient heat (heat pumps)
-CZ,RA600,233.7,Ambient heat (heat pumps)
-DE,RA600,1380.0,Ambient heat (heat pumps)
-DK,RA600,338.5,Ambient heat (heat pumps)
-EL,RA600,386.7,Ambient heat (heat pumps)
-ES,RA600,960.3,Ambient heat (heat pumps)
-FI,RA600,566.6,Ambient heat (heat pumps)
-FR,RA600,2766.1,Ambient heat (heat pumps)
-HR,RA600,14.6,Ambient heat (heat pumps)
-HU,RA600,17.5,Ambient heat (heat pumps)
-IE,RA600,57.1,Ambient heat (heat pumps)
-IT,RA600,2475.4,Ambient heat (heat pumps)
-LT,RA600,30.1,Ambient heat (heat pumps)
-LU,RA600,2.4,Ambient heat (heat pumps)
-LV,RA600,1.0,Ambient heat (heat pumps)
-MT,RA600,14.4,Ambient heat (heat pumps)
-NL,RA600,313.1,Ambient heat (heat pumps)
-PL,RA600,298.1,Ambient heat (heat pumps)
-PT,RA600,718.6,Ambient heat (heat pumps)
-SE,RA600,1765.4,Ambient heat (heat pumps)
-SI,RA600,47.3,Ambient heat (heat pumps)
-SK,RA600,51.8,Ambient heat (heat pumps)
-AT,W6210,191.4,Renewable municipal waste
-BE,W6210,387.0,Renewable municipal waste
-BG,W6210,41.9,Renewable municipal waste
-CY,W6210,33.1,Renewable municipal waste
-CZ,W6210,95.8,Renewable municipal waste
-DE,W6210,3128.7,Renewable municipal waste
-DK,W6210,546.6,Renewable municipal waste
-EE,W6210,25.9,Renewable municipal waste
-ES,W6210,236.1,Renewable municipal waste
-FI,W6210,330.4,Renewable municipal waste
-FR,W6210,1244.3,Renewable municipal waste
-HU,W6210,71.9,Renewable municipal waste
-IE,W6210,145.0,Renewable municipal waste
-IT,W6210,843.2,Renewable municipal waste
-LT,W6210,28.2,Renewable municipal waste
-LU,W6210,13.0,Renewable municipal waste
-LV,W6210,35.5,Renewable municipal waste
-NL,W6210,969.3,Renewable municipal waste
-PL,W6210,143.5,Renewable municipal waste
-PT,W6210,111.6,Renewable municipal waste
-RO,W6210,2.0,Renewable municipal waste
-SE,W6210,966.5,Renewable municipal waste
-SK,W6210,31.8,Renewable municipal waste
+Country Code,SIEC Code,Consumption in KTOE,SIEC,Country
+AT,C0121,1208.7,Coking coal,Austria
+BE,C0121,1143.2,Coking coal,Belgium
+CZ,C0121,2429.4,Coking coal,Czechia
+DE,C0121,7096.0,Coking coal,Germany
+ES,C0121,475.8,Coking coal,Spain
+FI,C0121,757.2,Coking coal,Finland
+FR,C0121,2253.8,Coking coal,France
+HU,C0121,820.3,Coking coal,Hungary
+IT,C0121,1169.4,Coking coal,Italy
+NL,C0121,2678.8,Coking coal,Netherlands
+PL,C0121,9903.6,Coking coal,Poland
+RO,C0121,8.3,Coking coal,Romania
+SE,C0121,1017.5,Coking coal,Sweden
+SK,C0121,1362.1,Coking coal,Slovakia
+AT,C0129,705.8,Other bituminous coal,Austria
+BE,C0129,841.2,Other bituminous coal,Belgium
+BG,C0129,445.9,Other bituminous coal,Bulgaria
+CY,C0129,14.8,Other bituminous coal,Cyprus
+CZ,C0129,1486.2,Other bituminous coal,Czechia
+DE,C0129,13824.1,Other bituminous coal,Germany
+DK,C0129,897.1,Other bituminous coal,Denmark
+EE,C0129,7.3,Other bituminous coal,Estonia
+EL,C0129,186.7,Other bituminous coal,Greece
+ES,C0129,2313.4,Other bituminous coal,Spain
+FI,C0129,1001.0,Other bituminous coal,Finland
+FR,C0129,2644.4,Other bituminous coal,France
+HR,C0129,354.7,Other bituminous coal,Croatia
+HU,C0129,67.0,Other bituminous coal,Hungary
+IE,C0129,377.7,Other bituminous coal,Ireland
+IT,C0129,3785.5,Other bituminous coal,Italy
+LT,C0129,121.7,Other bituminous coal,Lithuania
+LU,C0129,35.3,Other bituminous coal,Luxembourg
+LV,C0129,25.6,Other bituminous coal,Latvia
+NL,C0129,1540.2,Other bituminous coal,Netherlands
+PL,C0129,29249.2,Other bituminous coal,Poland
+PT,C0129,604.4,Other bituminous coal,Portugal
+SE,C0129,583.1,Other bituminous coal,Sweden
+SI,C0129,8.3,Other bituminous coal,Slovenia
+SK,C0129,310.3,Other bituminous coal,Slovakia
+AT,C0220,1.2,Lignite,Austria
+BG,C0220,3746.7,Lignite,Bulgaria
+CZ,C0220,9290.6,Lignite,Czechia
+DE,C0220,23495.1,Lignite,Germany
+EL,C0220,1668.4,Lignite,Greece
+FR,C0220,22.6,Lignite,France
+HR,C0220,7.1,Lignite,Croatia
+HU,C0220,967.6,Lignite,Hungary
+IT,C0220,0.3,Lignite,Italy
+NL,C0220,7.6,Lignite,Netherlands
+PL,C0220,8857.8,Lignite,Poland
+RO,C0220,2721.1,Lignite,Romania
+SI,C0220,865.4,Lignite,Slovenia
+SK,C0220,474.4,Lignite,Slovakia
+AT,C0311,560.8,Coke oven coke,Austria
+BE,C0311,152.0,Coke oven coke,Belgium
+BG,C0311,47.9,Coke oven coke,Bulgaria
+CZ,C0311,209.9,Coke oven coke,Czechia
+DE,C0311,1094.6,Coke oven coke,Germany
+DK,C0311,13.8,Coke oven coke,Denmark
+EE,C0311,2.7,Coke oven coke,Estonia
+ES,C0311,579.9,Coke oven coke,Spain
+FI,C0311,210.6,Coke oven coke,Finland
+FR,C0311,422.0,Coke oven coke,France
+HR,C0311,21.1,Coke oven coke,Croatia
+HU,C0311,5.6,Coke oven coke,Hungary
+IT,C0311,295.2,Coke oven coke,Italy
+LT,C0311,12.8,Coke oven coke,Lithuania
+LU,C0311,0.1,Coke oven coke,Luxembourg
+LV,C0311,0.0,Coke oven coke,Latvia
+NL,C0311,66.8,Coke oven coke,Netherlands
+PL,C0311,522.5,Coke oven coke,Poland
+PT,C0311,7.5,Coke oven coke,Portugal
+RO,C0311,449.5,Coke oven coke,Romania
+SE,C0311,102.6,Coke oven coke,Sweden
+SI,C0311,19.5,Coke oven coke,Slovenia
+SK,C0311,114.6,Coke oven coke,Slovakia
+BE,C0350-0370,21.2,Manufactured gases,Belgium
+DE,C0350-0370,0.0,Manufactured gases,Germany
+AT,E7000,2108.6,Electricity,Austria
+BE,E7000,1179.9,Electricity,Belgium
+BG,E7000,318.7,Electricity,Bulgaria
+CZ,E7000,1149.4,Electricity,Czechia
+DE,E7000,4114.6,Electricity,Germany
+DK,E7000,1598.8,Electricity,Denmark
+EE,E7000,633.4,Electricity,Estonia
+EL,E7000,848.8,Electricity,Greece
+ES,E7000,1541.6,Electricity,Spain
+FI,E7000,1861.5,Electricity,Finland
+FR,E7000,1679.8,Electricity,France
+HR,E7000,902.1,Electricity,Croatia
+HU,E7000,1648.8,Electricity,Hungary
+IE,E7000,174.2,Electricity,Ireland
+IT,E7000,3421.3,Electricity,Italy
+LT,E7000,1033.0,Electricity,Lithuania
+LU,E7000,562.8,Electricity,Luxembourg
+LV,E7000,358.8,Electricity,Latvia
+MT,E7000,36.1,Electricity,Malta
+NL,E7000,1806.8,Electricity,Netherlands
+PL,E7000,1773.4,Electricity,Poland
+PT,E7000,649.5,Electricity,Portugal
+RO,E7000,709.5,Electricity,Romania
+SE,E7000,1016.9,Electricity,Sweden
+SI,E7000,612.2,Electricity,Slovenia
+SK,E7000,1142.6,Electricity,Slovakia
+AT,G3000,15624.3,Natural gas,Austria
+BE,G3000,18086.9,Natural gas,Belgium
+BG,G3000,2523.8,Natural gas,Bulgaria
+CZ,G3000,7276.1,Natural gas,Czechia
+DE,G3000,75276.2,Natural gas,Germany
+DK,G3000,3536.7,Natural gas,Denmark
+EE,G3000,369.8,Natural gas,Estonia
+EL,G3000,4997.8,Natural gas,Greece
+ES,G3000,28955.6,Natural gas,Spain
+FI,G3000,2134.6,Natural gas,Finland
+FR,G3000,43065.4,Natural gas,France
+HR,G3000,2568.8,Natural gas,Croatia
+HU,G3000,12491.1,Natural gas,Hungary
+IE,G3000,4619.5,Natural gas,Ireland
+IT,G3000,58544.3,Natural gas,Italy
+LT,G3000,2403.6,Natural gas,Lithuania
+LU,G3000,621.3,Natural gas,Luxembourg
+LV,G3000,911.2,Natural gas,Latvia
+MT,G3000,318.2,Natural gas,Malta
+NL,G3000,60199.9,Natural gas,Netherlands
+PL,G3000,18245.9,Natural gas,Poland
+PT,G3000,5207.6,Natural gas,Portugal
+RO,G3000,9797.2,Natural gas,Romania
+SE,G3000,1297.9,Natural gas,Sweden
+SI,G3000,735.6,Natural gas,Slovenia
+SK,G3000,4088.3,Natural gas,Slovakia
+AT,G3000_C0350-370,15624.3,Gas,Austria
+BE,G3000_C0350-370,18108.1,Gas,Belgium
+BG,G3000_C0350-370,2523.8,Gas,Bulgaria
+CZ,G3000_C0350-370,7276.1,Gas,Czechia
+DE,G3000_C0350-370,75276.3,Gas,Germany
+DK,G3000_C0350-370,3536.7,Gas,Denmark
+EE,G3000_C0350-370,369.8,Gas,Estonia
+EL,G3000_C0350-370,4997.8,Gas,Greece
+ES,G3000_C0350-370,28955.6,Gas,Spain
+FI,G3000_C0350-370,2134.6,Gas,Finland
+FR,G3000_C0350-370,43065.4,Gas,France
+HR,G3000_C0350-370,2568.8,Gas,Croatia
+HU,G3000_C0350-370,12491.1,Gas,Hungary
+IE,G3000_C0350-370,4619.5,Gas,Ireland
+IT,G3000_C0350-370,58544.3,Gas,Italy
+LT,G3000_C0350-370,2403.6,Gas,Lithuania
+LU,G3000_C0350-370,621.3,Gas,Luxembourg
+LV,G3000_C0350-370,911.2,Gas,Latvia
+MT,G3000_C0350-370,318.2,Gas,Malta
+NL,G3000_C0350-370,60199.9,Gas,Netherlands
+PL,G3000_C0350-370,18245.9,Gas,Poland
+PT,G3000_C0350-370,5207.6,Gas,Portugal
+RO,G3000_C0350-370,9797.2,Gas,Romania
+SE,G3000_C0350-370,1297.9,Gas,Sweden
+SI,G3000_C0350-370,735.6,Gas,Slovenia
+SK,G3000_C0350-370,4088.3,Gas,Slovakia
+AT,H8000,3.4,Heat,Austria
+BE,H8000,325.5,Heat,Belgium
+BG,H8000,80.1,Heat,Bulgaria
+CZ,H8000,22.5,Heat,Czechia
+DK,H8000,2.6,Heat,Denmark
+EE,H8000,51.2,Heat,Estonia
+FI,H8000,138.6,Heat,Finland
+FR,H8000,161.2,Heat,France
+LT,H8000,230.5,Heat,Lithuania
+NL,H8000,300.6,Heat,Netherlands
+PL,H8000,26.6,Heat,Poland
+RO,H8000,29.5,Heat,Romania
+SK,H8000,1.6,Heat,Slovakia
+BE,N900H,8370.0,Nuclear heat,Belgium
+BG,N900H,4334.7,Nuclear heat,Bulgaria
+CZ,N900H,7496.3,Nuclear heat,Czechia
+DE,N900H,16576.8,Nuclear heat,Germany
+ES,N900H,15174.0,Nuclear heat,Spain
+FI,N900H,5547.6,Nuclear heat,Finland
+FR,N900H,92211.0,Nuclear heat,France
+HU,N900H,4053.0,Nuclear heat,Hungary
+NL,N900H,955.9,Nuclear heat,Netherlands
+RO,N900H,2887.0,Nuclear heat,Romania
+SE,N900H,12028.0,Nuclear heat,Sweden
+SI,N900H,1496.9,Nuclear heat,Slovenia
+SK,N900H,4044.0,Nuclear heat,Slovakia
+AT,O4000,14255.4,Oil and petroleum products,Austria
+BE,O4000,53923.1,Oil and petroleum products,Belgium
+BG,O4000,7341.2,Oil and petroleum products,Bulgaria
+CY,O4000,2295.7,Oil and petroleum products,Cyprus
+CZ,O4000,10694.2,Oil and petroleum products,Czechia
+DE,O4000,123577.8,Oil and petroleum products,Germany
+DK,O4000,15520.1,Oil and petroleum products,Denmark
+EE,O4000,2214.4,Oil and petroleum products,Estonia
+EL,O4000,31809.8,Oil and petroleum products,Greece
+ES,O4000,77010.6,Oil and petroleum products,Spain
+FI,O4000,17898.4,Oil and petroleum products,Finland
+FR,O4000,81241.0,Oil and petroleum products,France
+HR,O4000,5216.1,Oil and petroleum products,Croatia
+HU,O4000,10552.5,Oil and petroleum products,Hungary
+IE,O4000,8369.1,Oil and petroleum products,Ireland
+IT,O4000,73521.8,Oil and petroleum products,Italy
+LT,O4000,9087.7,Oil and petroleum products,Lithuania
+LU,O4000,2419.8,Oil and petroleum products,Luxembourg
+LV,O4000,2064.5,Oil and petroleum products,Latvia
+MT,O4000,2750.0,Oil and petroleum products,Malta
+NL,O4000,135746.0,Oil and petroleum products,Netherlands
+PL,O4000,34783.0,Oil and petroleum products,Poland
+PT,O4000,15026.7,Oil and petroleum products,Portugal
+RO,O4000,14296.3,Oil and petroleum products,Romania
+SE,O4000,28040.7,Oil and petroleum products,Sweden
+SI,O4000,4112.8,Oil and petroleum products,Slovenia
+SK,O4000,7317.6,Oil and petroleum products,Slovakia
+AT,O4100_TOT,8204.7,Crude oil,Austria
+BE,O4100_TOT,27726.3,Crude oil,Belgium
+BG,O4100_TOT,4967.8,Crude oil,Bulgaria
+CZ,O4100_TOT,6360.6,Crude oil,Czechia
+DE,O4100_TOT,85918.6,Crude oil,Germany
+DK,O4100_TOT,8450.8,Crude oil,Denmark
+EL,O4100_TOT,23121.1,Crude oil,Greece
+ES,O4100_TOT,55723.1,Crude oil,Spain
+FI,O4100_TOT,11150.0,Crude oil,Finland
+FR,O4100_TOT,34550.5,Crude oil,France
+HR,O4100_TOT,2593.8,Crude oil,Croatia
+HU,O4100_TOT,6929.7,Crude oil,Hungary
+IE,O4100_TOT,2969.4,Crude oil,Ireland
+IT,O4100_TOT,55826.7,Crude oil,Italy
+LT,O4100_TOT,7969.8,Crude oil,Lithuania
+NL,O4100_TOT,51794.6,Crude oil,Netherlands
+PL,O4100_TOT,26384.4,Crude oil,Poland
+PT,O4100_TOT,11208.0,Crude oil,Portugal
+RO,O4100_TOT,10432.6,Crude oil,Romania
+SE,O4100_TOT,18699.5,Crude oil,Sweden
+SI,O4100_TOT,0.3,Crude oil,Slovenia
+SK,O4100_TOT,5674.8,Crude oil,Slovakia
+AT,O4200-4500,158.8,Other primary oil,Austria
+BE,O4200-4500,1406.4,Other primary oil,Belgium
+BG,O4200-4500,116.2,Other primary oil,Bulgaria
+CZ,O4200-4500,36.5,Other primary oil,Czechia
+DE,O4200-4500,1348.0,Other primary oil,Germany
+DK,O4200-4500,64.2,Other primary oil,Denmark
+EL,O4200-4500,4521.8,Other primary oil,Greece
+ES,O4200-4500,4824.1,Other primary oil,Spain
+FI,O4200-4500,866.7,Other primary oil,Finland
+FR,O4200-4500,390.2,Other primary oil,France
+HR,O4200-4500,641.4,Other primary oil,Croatia
+HU,O4200-4500,412.5,Other primary oil,Hungary
+IE,O4200-4500,4.3,Other primary oil,Ireland
+IT,O4200-4500,3985.3,Other primary oil,Italy
+LT,O4200-4500,186.9,Other primary oil,Lithuania
+LV,O4200-4500,0.0,Other primary oil,Latvia
+NL,O4200-4500,8134.7,Other primary oil,Netherlands
+PL,O4200-4500,304.2,Other primary oil,Poland
+PT,O4200-4500,891.6,Other primary oil,Portugal
+RO,O4200-4500,1174.0,Other primary oil,Romania
+SE,O4200-4500,1365.6,Other primary oil,Sweden
+SI,O4200-4500,0.2,Other primary oil,Slovenia
+SK,O4200-4500,18.4,Other primary oil,Slovakia
+AT,O4652XR5210B,554.3,Motor gasoline (excluding biofuel portion),Austria
+BE,O4652XR5210B,717.4,Motor gasoline (excluding biofuel portion),Belgium
+BG,O4652XR5210B,290.3,Motor gasoline (excluding biofuel portion),Bulgaria
+CY,O4652XR5210B,324.8,Motor gasoline (excluding biofuel portion),Cyprus
+CZ,O4652XR5210B,617.1,Motor gasoline (excluding biofuel portion),Czechia
+DE,O4652XR5210B,1968.2,Motor gasoline (excluding biofuel portion),Germany
+DK,O4652XR5210B,464.5,Motor gasoline (excluding biofuel portion),Denmark
+EE,O4652XR5210B,725.1,Motor gasoline (excluding biofuel portion),Estonia
+EL,O4652XR5210B,491.3,Motor gasoline (excluding biofuel portion),Greece
+ES,O4652XR5210B,1270.8,Motor gasoline (excluding biofuel portion),Spain
+FI,O4652XR5210B,638.5,Motor gasoline (excluding biofuel portion),Finland
+FR,O4652XR5210B,1436.6,Motor gasoline (excluding biofuel portion),France
+HR,O4652XR5210B,137.4,Motor gasoline (excluding biofuel portion),Croatia
+HU,O4652XR5210B,451.9,Motor gasoline (excluding biofuel portion),Hungary
+IE,O4652XR5210B,460.3,Motor gasoline (excluding biofuel portion),Ireland
+IT,O4652XR5210B,592.0,Motor gasoline (excluding biofuel portion),Italy
+LT,O4652XR5210B,50.8,Motor gasoline (excluding biofuel portion),Lithuania
+LU,O4652XR5210B,264.9,Motor gasoline (excluding biofuel portion),Luxembourg
+LV,O4652XR5210B,194.6,Motor gasoline (excluding biofuel portion),Latvia
+MT,O4652XR5210B,76.7,Motor gasoline (excluding biofuel portion),Malta
+NL,O4652XR5210B,7769.3,Motor gasoline (excluding biofuel portion),Netherlands
+PL,O4652XR5210B,357.8,Motor gasoline (excluding biofuel portion),Poland
+PT,O4652XR5210B,209.3,Motor gasoline (excluding biofuel portion),Portugal
+RO,O4652XR5210B,106.7,Motor gasoline (excluding biofuel portion),Romania
+SE,O4652XR5210B,924.9,Motor gasoline (excluding biofuel portion),Sweden
+SI,O4652XR5210B,583.2,Motor gasoline (excluding biofuel portion),Slovenia
+SK,O4652XR5210B,203.6,Motor gasoline (excluding biofuel portion),Slovakia
+AT,O4661XR5230B,55.2,Kerosene-type jet fuel (excluding biofuel portion),Austria
+BE,O4661XR5230B,978.2,Kerosene-type jet fuel (excluding biofuel portion),Belgium
+BG,O4661XR5230B,16.9,Kerosene-type jet fuel (excluding biofuel portion),Bulgaria
+CY,O4661XR5230B,103.4,Kerosene-type jet fuel (excluding biofuel portion),Cyprus
+CZ,O4661XR5230B,108.6,Kerosene-type jet fuel (excluding biofuel portion),Czechia
+DE,O4661XR5230B,3094.4,Kerosene-type jet fuel (excluding biofuel portion),Germany
+DK,O4661XR5230B,552.1,Kerosene-type jet fuel (excluding biofuel portion),Denmark
+EE,O4661XR5230B,25.2,Kerosene-type jet fuel (excluding biofuel portion),Estonia
+EL,O4661XR5230B,271.6,Kerosene-type jet fuel (excluding biofuel portion),Greece
+ES,O4661XR5230B,1334.5,Kerosene-type jet fuel (excluding biofuel portion),Spain
+FI,O4661XR5230B,199.6,Kerosene-type jet fuel (excluding biofuel portion),Finland
+FR,O4661XR5230B,4148.5,Kerosene-type jet fuel (excluding biofuel portion),France
+HR,O4661XR5230B,0.3,Kerosene-type jet fuel (excluding biofuel portion),Croatia
+IE,O4661XR5230B,1027.8,Kerosene-type jet fuel (excluding biofuel portion),Ireland
+IT,O4661XR5230B,861.4,Kerosene-type jet fuel (excluding biofuel portion),Italy
+LT,O4661XR5230B,9.2,Kerosene-type jet fuel (excluding biofuel portion),Lithuania
+LU,O4661XR5230B,546.7,Kerosene-type jet fuel (excluding biofuel portion),Luxembourg
+LV,O4661XR5230B,60.7,Kerosene-type jet fuel (excluding biofuel portion),Latvia
+MT,O4661XR5230B,59.8,Kerosene-type jet fuel (excluding biofuel portion),Malta
+NL,O4661XR5230B,4185.0,Kerosene-type jet fuel (excluding biofuel portion),Netherlands
+PL,O4661XR5230B,26.0,Kerosene-type jet fuel (excluding biofuel portion),Poland
+PT,O4661XR5230B,41.8,Kerosene-type jet fuel (excluding biofuel portion),Portugal
+RO,O4661XR5230B,38.7,Kerosene-type jet fuel (excluding biofuel portion),Romania
+SE,O4661XR5230B,674.9,Kerosene-type jet fuel (excluding biofuel portion),Sweden
+SI,O4661XR5230B,129.7,Kerosene-type jet fuel (excluding biofuel portion),Slovenia
+SK,O4661XR5230B,6.2,Kerosene-type jet fuel (excluding biofuel portion),Slovakia
+AT,O4671XR5220B,4691.8,Gas oil and diesel oil (excluding biofuel portion),Austria
+BE,O4671XR5220B,8418.4,Gas oil and diesel oil (excluding biofuel portion),Belgium
+BG,O4671XR5220B,951.6,Gas oil and diesel oil (excluding biofuel portion),Bulgaria
+CY,O4671XR5220B,934.2,Gas oil and diesel oil (excluding biofuel portion),Cyprus
+CZ,O4671XR5220B,2565.7,Gas oil and diesel oil (excluding biofuel portion),Czechia
+DE,O4671XR5220B,18253.1,Gas oil and diesel oil (excluding biofuel portion),Germany
+DK,O4671XR5220B,2325.1,Gas oil and diesel oil (excluding biofuel portion),Denmark
+EE,O4671XR5220B,808.7,Gas oil and diesel oil (excluding biofuel portion),Estonia
+EL,O4671XR5220B,1399.0,Gas oil and diesel oil (excluding biofuel portion),Greece
+ES,O4671XR5220B,6184.8,Gas oil and diesel oil (excluding biofuel portion),Spain
+FI,O4671XR5220B,1971.1,Gas oil and diesel oil (excluding biofuel portion),Finland
+FR,O4671XR5220B,25462.1,Gas oil and diesel oil (excluding biofuel portion),France
+HR,O4671XR5220B,1499.8,Gas oil and diesel oil (excluding biofuel portion),Croatia
+HU,O4671XR5220B,1524.7,Gas oil and diesel oil (excluding biofuel portion),Hungary
+IE,O4671XR5220B,2812.7,Gas oil and diesel oil (excluding biofuel portion),Ireland
+IT,O4671XR5220B,4659.2,Gas oil and diesel oil (excluding biofuel portion),Italy
+LT,O4671XR5220B,563.3,Gas oil and diesel oil (excluding biofuel portion),Lithuania
+LU,O4671XR5220B,1569.3,Gas oil and diesel oil (excluding biofuel portion),Luxembourg
+LV,O4671XR5220B,1498.9,Gas oil and diesel oil (excluding biofuel portion),Latvia
+MT,O4671XR5220B,693.7,Gas oil and diesel oil (excluding biofuel portion),Malta
+NL,O4671XR5220B,12171.7,Gas oil and diesel oil (excluding biofuel portion),Netherlands
+PL,O4671XR5220B,4389.8,Gas oil and diesel oil (excluding biofuel portion),Poland
+PT,O4671XR5220B,937.3,Gas oil and diesel oil (excluding biofuel portion),Portugal
+RO,O4671XR5220B,1298.7,Gas oil and diesel oil (excluding biofuel portion),Romania
+SE,O4671XR5220B,3374.0,Gas oil and diesel oil (excluding biofuel portion),Sweden
+SI,O4671XR5220B,2692.6,Gas oil and diesel oil (excluding biofuel portion),Slovenia
+SK,O4671XR5220B,855.4,Gas oil and diesel oil (excluding biofuel portion),Slovakia
+AT,O4680,89.8,Fuel oil,Austria
+BE,O4680,4242.2,Fuel oil,Belgium
+BG,O4680,66.2,Fuel oil,Bulgaria
+CY,O4680,768.8,Fuel oil,Cyprus
+CZ,O4680,13.2,Fuel oil,Czechia
+DE,O4680,1544.6,Fuel oil,Germany
+DK,O4680,3231.8,Fuel oil,Denmark
+EE,O4680,507.6,Fuel oil,Estonia
+EL,O4680,1526.5,Fuel oil,Greece
+ES,O4680,3892.6,Fuel oil,Spain
+FI,O4680,463.2,Fuel oil,Finland
+FR,O4680,1966.3,Fuel oil,France
+HR,O4680,11.7,Fuel oil,Croatia
+HU,O4680,11.5,Fuel oil,Hungary
+IE,O4680,169.7,Fuel oil,Ireland
+IT,O4680,1183.8,Fuel oil,Italy
+LT,O4680,113.0,Fuel oil,Lithuania
+LU,O4680,1.1,Fuel oil,Luxembourg
+LV,O4680,4.8,Fuel oil,Latvia
+MT,O4680,1885.7,Fuel oil,Malta
+NL,O4680,19456.7,Fuel oil,Netherlands
+PL,O4680,30.1,Fuel oil,Poland
+PT,O4680,251.6,Fuel oil,Portugal
+RO,O4680,2.3,Fuel oil,Romania
+SE,O4680,950.4,Fuel oil,Sweden
+SI,O4680,417.2,Fuel oil,Slovenia
+SK,O4680,25.1,Fuel oil,Slovakia
+AT,PP_OTH,501.0,Other petroleum products,Austria
+BE,PP_OTH,10434.2,Other petroleum products,Belgium
+BG,PP_OTH,932.3,Other petroleum products,Bulgaria
+CY,PP_OTH,164.5,Other petroleum products,Cyprus
+CZ,PP_OTH,992.6,Other petroleum products,Czechia
+DE,PP_OTH,11450.7,Other petroleum products,Germany
+DK,PP_OTH,431.6,Other petroleum products,Denmark
+EE,PP_OTH,147.9,Other petroleum products,Estonia
+EL,PP_OTH,478.5,Other petroleum products,Greece
+ES,PP_OTH,3780.8,Other petroleum products,Spain
+FI,PP_OTH,2609.2,Other petroleum products,Finland
+FR,PP_OTH,13286.8,Other petroleum products,France
+HR,PP_OTH,331.7,Other petroleum products,Croatia
+HU,PP_OTH,1222.2,Other petroleum products,Hungary
+IE,PP_OTH,925.0,Other petroleum products,Ireland
+IT,PP_OTH,6413.4,Other petroleum products,Italy
+LT,PP_OTH,194.8,Other petroleum products,Lithuania
+LU,PP_OTH,37.8,Other petroleum products,Luxembourg
+LV,PP_OTH,305.4,Other petroleum products,Latvia
+MT,PP_OTH,34.1,Other petroleum products,Malta
+NL,PP_OTH,32233.9,Other petroleum products,Netherlands
+PL,PP_OTH,3290.7,Other petroleum products,Poland
+PT,PP_OTH,1487.1,Other petroleum products,Portugal
+RO,PP_OTH,1243.2,Other petroleum products,Romania
+SE,PP_OTH,2051.3,Other petroleum products,Sweden
+SI,PP_OTH,289.7,Other petroleum products,Slovenia
+SK,PP_OTH,534.0,Other petroleum products,Slovakia
+AT,R5110-5150_W6000RI,5059.3,Primary solid biofuels,Austria
+BE,R5110-5150_W6000RI,1842.7,Primary solid biofuels,Belgium
+BG,R5110-5150_W6000RI,1737.1,Primary solid biofuels,Bulgaria
+CY,R5110-5150_W6000RI,27.4,Primary solid biofuels,Cyprus
+CZ,R5110-5150_W6000RI,3670.0,Primary solid biofuels,Czechia
+DE,R5110-5150_W6000RI,13564.7,Primary solid biofuels,Germany
+DK,R5110-5150_W6000RI,2992.8,Primary solid biofuels,Denmark
+EE,R5110-5150_W6000RI,1747.4,Primary solid biofuels,Estonia
+EL,R5110-5150_W6000RI,794.3,Primary solid biofuels,Greece
+ES,R5110-5150_W6000RI,5053.7,Primary solid biofuels,Spain
+FI,R5110-5150_W6000RI,8451.8,Primary solid biofuels,Finland
+FR,R5110-5150_W6000RI,10088.2,Primary solid biofuels,France
+HR,R5110-5150_W6000RI,1559.5,Primary solid biofuels,Croatia
+HU,R5110-5150_W6000RI,2074.6,Primary solid biofuels,Hungary
+IE,R5110-5150_W6000RI,283.2,Primary solid biofuels,Ireland
+IT,R5110-5150_W6000RI,8378.1,Primary solid biofuels,Italy
+LT,R5110-5150_W6000RI,1431.1,Primary solid biofuels,Lithuania
+LU,R5110-5150_W6000RI,187.0,Primary solid biofuels,Luxembourg
+LV,R5110-5150_W6000RI,2817.2,Primary solid biofuels,Latvia
+MT,R5110-5150_W6000RI,1.4,Primary solid biofuels,Malta
+NL,R5110-5150_W6000RI,2533.8,Primary solid biofuels,Netherlands
+PL,R5110-5150_W6000RI,9615.0,Primary solid biofuels,Poland
+PT,R5110-5150_W6000RI,2959.6,Primary solid biofuels,Portugal
+RO,R5110-5150_W6000RI,3572.3,Primary solid biofuels,Romania
+SE,R5110-5150_W6000RI,9951.5,Primary solid biofuels,Sweden
+SI,R5110-5150_W6000RI,529.0,Primary solid biofuels,Slovenia
+SK,R5110-5150_W6000RI,1322.8,Primary solid biofuels,Slovakia
+AT,R5200,858.5,Liquid biofuels,Austria
+BE,R5200,1131.1,Liquid biofuels,Belgium
+BG,R5200,219.9,Liquid biofuels,Bulgaria
+CY,R5200,27.3,Liquid biofuels,Cyprus
+CZ,R5200,587.8,Liquid biofuels,Czechia
+DE,R5200,5814.0,Liquid biofuels,Germany
+DK,R5200,310.3,Liquid biofuels,Denmark
+EE,R5200,38.9,Liquid biofuels,Estonia
+EL,R5200,289.8,Liquid biofuels,Greece
+ES,R5200,3384.7,Liquid biofuels,Spain
+FI,R5200,492.1,Liquid biofuels,Finland
+FR,R5200,3473.8,Liquid biofuels,France
+HR,R5200,71.1,Liquid biofuels,Croatia
+HU,R5200,642.1,Liquid biofuels,Hungary
+IE,R5200,190.7,Liquid biofuels,Ireland
+IT,R5200,2797.5,Liquid biofuels,Italy
+LT,R5200,250.5,Liquid biofuels,Lithuania
+LU,R5200,125.0,Liquid biofuels,Luxembourg
+LV,R5200,116.0,Liquid biofuels,Latvia
+MT,R5200,14.6,Liquid biofuels,Malta
+NL,R5200,2166.2,Liquid biofuels,Netherlands
+PL,R5200,1343.0,Liquid biofuels,Poland
+PT,R5200,320.8,Liquid biofuels,Portugal
+RO,R5200,499.6,Liquid biofuels,Romania
+SE,R5200,2105.0,Liquid biofuels,Sweden
+SI,R5200,96.2,Liquid biofuels,Slovenia
+SK,R5200,283.8,Liquid biofuels,Slovakia
+AT,R5300,210.6,Biogases,Austria
+BE,R5300,243.9,Biogases,Belgium
+BG,R5300,53.3,Biogases,Bulgaria
+CY,R5300,13.3,Biogases,Cyprus
+CZ,R5300,594.5,Biogases,Czechia
+DE,R5300,7744.8,Biogases,Germany
+DK,R5300,510.6,Biogases,Denmark
+EE,R5300,19.9,Biogases,Estonia
+EL,R5300,135.3,Biogases,Greece
+ES,R5300,323.4,Biogases,Spain
+FI,R5300,169.0,Biogases,Finland
+FR,R5300,1133.8,Biogases,France
+HR,R5300,83.1,Biogases,Croatia
+HU,R5300,89.4,Biogases,Hungary
+IE,R5300,52.3,Biogases,Ireland
+IT,R5300,2017.9,Biogases,Italy
+LT,R5300,38.6,Biogases,Lithuania
+LU,R5300,18.0,Biogases,Luxembourg
+LV,R5300,80.2,Biogases,Latvia
+MT,R5300,1.3,Biogases,Malta
+NL,R5300,415.7,Biogases,Netherlands
+PL,R5300,322.4,Biogases,Poland
+PT,R5300,82.7,Biogases,Portugal
+RO,R5300,18.5,Biogases,Romania
+SE,R5300,185.8,Biogases,Sweden
+SI,R5300,27.0,Biogases,Slovenia
+SK,R5300,130.9,Biogases,Slovakia
+AT,RA000,11324.1,Renewables and biofuels,Austria
+BE,RA000,5348.2,Renewables and biofuels,Belgium
+BG,RA000,2727.4,Renewables and biofuels,Bulgaria
+CY,RA000,283.0,Renewables and biofuels,Cyprus
+CZ,RA000,5641.7,Renewables and biofuels,Czechia
+DE,RA000,49985.4,Renewables and biofuels,Germany
+DK,RA000,6285.3,Renewables and biofuels,Denmark
+EE,RA000,1928.4,Renewables and biofuels,Estonia
+EL,RA000,3411.5,Renewables and biofuels,Greece
+ES,RA000,21073.0,Renewables and biofuels,Spain
+FI,RA000,12079.3,Renewables and biofuels,Finland
+FR,RA000,29329.2,Renewables and biofuels,France
+HR,RA000,2452.4,Renewables and biofuels,Croatia
+HU,RA000,3349.1,Renewables and biofuels,Hungary
+IE,RA000,1821.1,Renewables and biofuels,Ireland
+IT,RA000,29995.7,Renewables and biofuels,Italy
+LT,RA000,1953.6,Renewables and biofuels,Lithuania
+LU,RA000,399.8,Renewables and biofuels,Luxembourg
+LV,RA000,3293.7,Renewables and biofuels,Latvia
+MT,RA000,57.3,Renewables and biofuels,Malta
+NL,RA000,8657.0,Renewables and biofuels,Netherlands
+PL,RA000,13536.9,Renewables and biofuels,Poland
+PT,RA000,6751.1,Renewables and biofuels,Portugal
+RO,RA000,6183.3,Renewables and biofuels,Romania
+SE,RA000,23666.1,Renewables and biofuels,Sweden
+SI,RA000,1177.6,Renewables and biofuels,Slovenia
+SK,RA000,2293.2,Renewables and biofuels,Slovakia
+AT,RA100,3611.2,Hydro,Austria
+BE,RA100,22.9,Hydro,Belgium
+BG,RA100,242.5,Hydro,Bulgaria
+CZ,RA100,184.3,Hydro,Czechia
+DE,RA100,1575.4,Hydro,Germany
+DK,RA100,1.5,Hydro,Denmark
+EE,RA100,2.6,Hydro,Estonia
+EL,RA100,283.9,Hydro,Greece
+ES,RA100,2623.1,Hydro,Spain
+FI,RA100,1365.7,Hydro,Finland
+FR,RA100,5336.4,Hydro,France
+HR,RA100,486.9,Hydro,Croatia
+HU,RA100,21.0,Hydro,Hungary
+IE,RA100,80.2,Hydro,Ireland
+IT,RA100,4088.7,Hydro,Italy
+LT,RA100,25.8,Hydro,Lithuania
+LU,RA100,7.9,Hydro,Luxembourg
+LV,RA100,223.8,Hydro,Latvia
+NL,RA100,4.0,Hydro,Netherlands
+PL,RA100,182.1,Hydro,Poland
+PT,RA100,1038.9,Hydro,Portugal
+RO,RA100,1322.5,Hydro,Romania
+SE,RA100,6224.3,Hydro,Sweden
+SI,RA100,424.3,Hydro,Slovenia
+SK,RA100,396.6,Hydro,Slovakia
+AT,RA200,36.4,Geothermal,Austria
+BE,RA200,3.6,Geothermal,Belgium
+BG,RA200,35.7,Geothermal,Bulgaria
+DE,RA200,361.9,Geothermal,Germany
+DK,RA200,1.1,Geothermal,Denmark
+EL,RA200,5.6,Geothermal,Greece
+ES,RA200,0.2,Geothermal,Spain
+FR,RA200,477.2,Geothermal,France
+HR,RA200,55.6,Geothermal,Croatia
+HU,RA200,149.9,Geothermal,Hungary
+IT,RA200,5342.9,Geothermal,Italy
+NL,RA200,147.7,Geothermal,Netherlands
+PL,RA200,25.6,Geothermal,Poland
+PT,RA200,199.2,Geothermal,Portugal
+RO,RA200,21.3,Geothermal,Romania
+SI,RA200,11.4,Geothermal,Slovenia
+SK,RA200,9.4,Geothermal,Slovakia
+AT,RA300,584.0,Wind,Austria
+BE,RA300,1097.5,Wind,Belgium
+BG,RA300,127.0,Wind,Bulgaria
+CY,RA300,20.7,Wind,Cyprus
+CZ,RA300,60.1,Wind,Czechia
+DE,RA300,11358.7,Wind,Germany
+DK,RA300,1404.1,Wind,Denmark
+EE,RA300,72.6,Wind,Estonia
+EL,RA300,800.5,Wind,Greece
+ES,RA300,4853.3,Wind,Spain
+FI,RA300,682.6,Wind,Finland
+FR,RA300,3421.5,Wind,France
+HR,RA300,148.0,Wind,Croatia
+HU,RA300,56.3,Wind,Hungary
+IE,RA300,993.1,Wind,Ireland
+IT,RA300,1613.2,Wind,Italy
+LT,RA300,133.4,Wind,Lithuania
+LU,RA300,30.2,Wind,Luxembourg
+LV,RA300,15.2,Wind,Latvia
+MT,RA300,0.0,Wind,Malta
+NL,RA300,1318.9,Wind,Netherlands
+PL,RA300,1358.6,Wind,Poland
+PT,RA300,1057.5,Wind,Portugal
+RO,RA300,597.2,Wind,Romania
+SE,RA300,2366.8,Wind,Sweden
+SI,RA300,0.5,Wind,Slovenia
+SK,RA300,0.3,Wind,Slovakia
+AT,RA410,182.0,Solar thermal,Austria
+BE,RA410,27.0,Solar thermal,Belgium
+BG,RA410,27.4,Solar thermal,Bulgaria
+CY,RA410,74.4,Solar thermal,Cyprus
+CZ,RA410,18.8,Solar thermal,Czechia
+DE,RA410,748.7,Solar thermal,Germany
+DK,RA410,78.2,Solar thermal,Denmark
+EL,RA410,293.1,Solar thermal,Greece
+ES,RA410,2288.0,Solar thermal,Spain
+FI,RA410,2.4,Solar thermal,Finland
+FR,RA410,194.6,Solar thermal,France
+HR,RA410,16.3,Solar thermal,Croatia
+HU,RA410,15.0,Solar thermal,Hungary
+IE,RA410,14.1,Solar thermal,Ireland
+IT,RA410,236.4,Solar thermal,Italy
+LU,RA410,2.6,Solar thermal,Luxembourg
+LV,RA410,1.0,Solar thermal,Latvia
+MT,RA410,5.1,Solar thermal,Malta
+NL,RA410,28.1,Solar thermal,Netherlands
+PL,RA410,80.1,Solar thermal,Poland
+PT,RA410,100.7,Solar thermal,Portugal
+RO,RA410,0.8,Solar thermal,Romania
+SE,RA410,10.4,Solar thermal,Sweden
+SI,RA410,10.3,Solar thermal,Slovenia
+SK,RA410,8.1,Solar thermal,Slovakia
+AT,RA420,175.7,Solar photovoltaic,Austria
+BE,RA420,439.0,Solar photovoltaic,Belgium
+BG,RA420,127.3,Solar photovoltaic,Bulgaria
+CY,RA420,25.4,Solar photovoltaic,Cyprus
+CZ,RA420,196.6,Solar photovoltaic,Czechia
+DE,RA420,4182.4,Solar photovoltaic,Germany
+DK,RA420,101.5,Solar photovoltaic,Denmark
+EE,RA420,21.1,Solar photovoltaic,Estonia
+EL,RA420,382.4,Solar photovoltaic,Greece
+ES,RA420,1347.8,Solar photovoltaic,Spain
+FI,RA420,18.8,Solar photovoltaic,Finland
+FR,RA420,1152.1,Solar photovoltaic,France
+HR,RA420,8.2,Solar photovoltaic,Croatia
+HU,RA420,211.4,Solar photovoltaic,Hungary
+IE,RA420,5.5,Solar photovoltaic,Ireland
+IT,RA420,2144.6,Solar photovoltaic,Italy
+LT,RA420,11.1,Solar photovoltaic,Lithuania
+LU,RA420,13.9,Solar photovoltaic,Luxembourg
+LV,RA420,0.4,Solar photovoltaic,Latvia
+MT,RA420,20.4,Solar photovoltaic,Malta
+NL,RA420,753.7,Solar photovoltaic,Netherlands
+PL,RA420,168.4,Solar photovoltaic,Poland
+PT,RA420,147.5,Solar photovoltaic,Portugal
+RO,RA420,149.0,Solar photovoltaic,Romania
+SE,RA420,90.4,Solar photovoltaic,Sweden
+SI,RA420,31.7,Solar photovoltaic,Slovenia
+SK,RA420,57.0,Solar photovoltaic,Slovakia
+AT,RA500_5160,11.7,Other renewable energies,Austria
+BE,RA500_5160,22.7,Other renewable energies,Belgium
+BG,RA500_5160,3.5,Other renewable energies,Bulgaria
+CY,RA500_5160,10.2,Other renewable energies,Cyprus
+DE,RA500_5160,126.1,Other renewable energies,Germany
+EL,RA500_5160,39.8,Other renewable energies,Greece
+ES,RA500_5160,2.3,Other renewable energies,Spain
+FR,RA500_5160,41.4,Other renewable energies,France
+HR,RA500_5160,9.1,Other renewable energies,Croatia
+IT,RA500_5160,57.9,Other renewable energies,Italy
+LT,RA500_5160,4.7,Other renewable energies,Lithuania
+LV,RA500_5160,3.3,Other renewable energies,Latvia
+NL,RA500_5160,6.4,Other renewable energies,Netherlands
+PT,RA500_5160,14.0,Other renewable energies,Portugal
+SK,RA500_5160,0.7,Other renewable energies,Slovakia
+AT,RA600,403.3,Ambient heat (heat pumps),Austria
+BE,RA600,130.8,Ambient heat (heat pumps),Belgium
+BG,RA600,111.6,Ambient heat (heat pumps),Bulgaria
+CY,RA600,51.2,Ambient heat (heat pumps),Cyprus
+CZ,RA600,233.7,Ambient heat (heat pumps),Czechia
+DE,RA600,1380.0,Ambient heat (heat pumps),Germany
+DK,RA600,338.5,Ambient heat (heat pumps),Denmark
+EL,RA600,386.7,Ambient heat (heat pumps),Greece
+ES,RA600,960.3,Ambient heat (heat pumps),Spain
+FI,RA600,566.6,Ambient heat (heat pumps),Finland
+FR,RA600,2766.1,Ambient heat (heat pumps),France
+HR,RA600,14.6,Ambient heat (heat pumps),Croatia
+HU,RA600,17.5,Ambient heat (heat pumps),Hungary
+IE,RA600,57.1,Ambient heat (heat pumps),Ireland
+IT,RA600,2475.4,Ambient heat (heat pumps),Italy
+LT,RA600,30.1,Ambient heat (heat pumps),Lithuania
+LU,RA600,2.4,Ambient heat (heat pumps),Luxembourg
+LV,RA600,1.0,Ambient heat (heat pumps),Latvia
+MT,RA600,14.4,Ambient heat (heat pumps),Malta
+NL,RA600,313.1,Ambient heat (heat pumps),Netherlands
+PL,RA600,298.1,Ambient heat (heat pumps),Poland
+PT,RA600,718.6,Ambient heat (heat pumps),Portugal
+SE,RA600,1765.4,Ambient heat (heat pumps),Sweden
+SI,RA600,47.3,Ambient heat (heat pumps),Slovenia
+SK,RA600,51.8,Ambient heat (heat pumps),Slovakia
+AT,SFF_OTH,54.0,Other solid fossil fuels,Austria
+BE,SFF_OTH,539.9,Other solid fossil fuels,Belgium
+BG,SFF_OTH,101.4,Other solid fossil fuels,Bulgaria
+CZ,SFF_OTH,362.7,Other solid fossil fuels,Czechia
+DE,SFF_OTH,1128.5,Other solid fossil fuels,Germany
+EE,SFF_OTH,2522.4,Other solid fossil fuels,Estonia
+ES,SFF_OTH,1068.3,Other solid fossil fuels,Spain
+FI,SFF_OTH,1036.1,Other solid fossil fuels,Finland
+FR,SFF_OTH,290.0,Other solid fossil fuels,France
+HR,SFF_OTH,0.6,Other solid fossil fuels,Croatia
+HU,SFF_OTH,26.9,Other solid fossil fuels,Hungary
+IE,SFF_OTH,673.1,Other solid fossil fuels,Ireland
+IT,SFF_OTH,54.7,Other solid fossil fuels,Italy
+LT,SFF_OTH,18.7,Other solid fossil fuels,Lithuania
+LU,SFF_OTH,7.8,Other solid fossil fuels,Luxembourg
+LV,SFF_OTH,0.9,Other solid fossil fuels,Latvia
+NL,SFF_OTH,8.3,Other solid fossil fuels,Netherlands
+PL,SFF_OTH,207.0,Other solid fossil fuels,Poland
+PT,SFF_OTH,3.7,Other solid fossil fuels,Portugal
+RO,SFF_OTH,414.6,Other solid fossil fuels,Romania
+SE,SFF_OTH,63.2,Other solid fossil fuels,Sweden
+SI,SFF_OTH,153.2,Other solid fossil fuels,Slovenia
+SK,SFF_OTH,124.0,Other solid fossil fuels,Slovakia
+AT,SFF_P1000,2530.5,Solid fossil fuels and peat,Austria
+BE,SFF_P1000,2676.3,Solid fossil fuels and peat,Belgium
+BG,SFF_P1000,4342.0,Solid fossil fuels and peat,Bulgaria
+CY,SFF_P1000,14.8,Solid fossil fuels and peat,Cyprus
+CZ,SFF_P1000,13778.9,Solid fossil fuels and peat,Czechia
+DE,SFF_P1000,46638.3,Solid fossil fuels and peat,Germany
+DK,SFF_P1000,910.9,Solid fossil fuels and peat,Denmark
+EE,SFF_P1000,2532.5,Solid fossil fuels and peat,Estonia
+EL,SFF_P1000,1855.1,Solid fossil fuels and peat,Greece
+ES,SFF_P1000,4437.4,Solid fossil fuels and peat,Spain
+FI,SFF_P1000,3004.9,Solid fossil fuels and peat,Finland
+FR,SFF_P1000,5632.8,Solid fossil fuels and peat,France
+HR,SFF_P1000,383.5,Solid fossil fuels and peat,Croatia
+HU,SFF_P1000,1887.4,Solid fossil fuels and peat,Hungary
+IE,SFF_P1000,1050.8,Solid fossil fuels and peat,Ireland
+IT,SFF_P1000,5305.1,Solid fossil fuels and peat,Italy
+LT,SFF_P1000,153.1,Solid fossil fuels and peat,Lithuania
+LU,SFF_P1000,43.2,Solid fossil fuels and peat,Luxembourg
+LV,SFF_P1000,26.5,Solid fossil fuels and peat,Latvia
+NL,SFF_P1000,4301.7,Solid fossil fuels and peat,Netherlands
+PL,SFF_P1000,48740.0,Solid fossil fuels and peat,Poland
+PT,SFF_P1000,615.6,Solid fossil fuels and peat,Portugal
+RO,SFF_P1000,3593.6,Solid fossil fuels and peat,Romania
+SE,SFF_P1000,1766.4,Solid fossil fuels and peat,Sweden
+SI,SFF_P1000,1046.3,Solid fossil fuels and peat,Slovenia
+SK,SFF_P1000,2385.4,Solid fossil fuels and peat,Slovakia
+AT,TOTAL,46514.5,Total,Austria
+BE,TOTAL,90577.7,Total,Belgium
+BG,TOTAL,21733.9,Total,Bulgaria
+CY,TOTAL,2628.9,Total,Cyprus
+CZ,TOTAL,46427.7,Total,Czechia
+DE,TOTAL,320358.3,Total,Germany
+DK,TOTAL,28301.6,Total,Denmark
+EE,TOTAL,7759.0,Total,Estonia
+EL,TOTAL,42932.6,Total,Greece
+ES,TOTAL,148731.9,Total,Spain
+FI,TOTAL,42958.6,Total,Finland
+FR,TOTAL,254953.4,Total,France
+HR,TOTAL,11561.9,Total,Croatia
+HU,TOTAL,34192.9,Total,Hungary
+IE,TOTAL,16181.4,Total,Ireland
+IT,TOTAL,171978.3,Total,Italy
+LT,TOTAL,14921.8,Total,Lithuania
+LU,TOTAL,4091.6,Total,Luxembourg
+LV,TOTAL,6707.3,Total,Latvia
+MT,TOTAL,3161.7,Total,Malta
+NL,TOTAL,212793.7,Total,Netherlands
+PL,TOTAL,118174.8,Total,Poland
+PT,TOTAL,28437.6,Total,Portugal
+RO,TOTAL,37778.1,Total,Romania
+SE,TOTAL,68806.9,Total,Sweden
+SI,TOTAL,9238.5,Total,Slovenia
+SK,TOTAL,21508.4,Total,Slovakia
+AT,W6100,344.3,Industrial waste (non-renewable),Austria
+BE,W6100,294.0,Industrial waste (non-renewable),Belgium
+BG,W6100,66.2,Industrial waste (non-renewable),Bulgaria
+CY,W6100,6.9,Industrial waste (non-renewable),Cyprus
+CZ,W6100,304.6,Industrial waste (non-renewable),Czechia
+DE,W6100,1060.5,Industrial waste (non-renewable),Germany
+EE,W6100,3.4,Industrial waste (non-renewable),Estonia
+EL,W6100,9.7,Industrial waste (non-renewable),Greece
+ES,W6100,303.6,Industrial waste (non-renewable),Spain
+FI,W6100,48.4,Industrial waste (non-renewable),Finland
+FR,W6100,388.7,Industrial waste (non-renewable),France
+HR,W6100,38.9,Industrial waste (non-renewable),Croatia
+HU,W6100,148.5,Industrial waste (non-renewable),Hungary
+IT,W6100,346.9,Industrial waste (non-renewable),Italy
+LT,W6100,24.1,Industrial waste (non-renewable),Lithuania
+LU,W6100,23.3,Industrial waste (non-renewable),Luxembourg
+LV,W6100,10.0,Industrial waste (non-renewable),Latvia
+PL,W6100,660.6,Industrial waste (non-renewable),Poland
+PT,W6100,99.5,Industrial waste (non-renewable),Portugal
+RO,W6100,279.2,Industrial waste (non-renewable),Romania
+SE,W6100,98.7,Industrial waste (non-renewable),Sweden
+SI,W6100,57.2,Industrial waste (non-renewable),Slovenia
+SK,W6100,207.3,Industrial waste (non-renewable),Slovakia
+AT,W6100_6220,668.2,Non-renewable waste,Austria
+BE,W6100_6220,646.7,Non-renewable waste,Belgium
+BG,W6100_6220,66.2,Non-renewable waste,Bulgaria
+CY,W6100_6220,35.5,Non-renewable waste,Cyprus
+CZ,W6100_6220,368.5,Non-renewable waste,Czechia
+DE,W6100_6220,4189.2,Non-renewable waste,Germany
+DK,W6100_6220,447.2,Non-renewable waste,Denmark
+EE,W6100_6220,29.3,Non-renewable waste,Estonia
+EL,W6100_6220,9.7,Non-renewable waste,Greece
+ES,W6100_6220,539.7,Non-renewable waste,Spain
+FI,W6100_6220,293.7,Non-renewable waste,Finland
+FR,W6100_6220,1633.0,Non-renewable waste,France
+HR,W6100_6220,38.9,Non-renewable waste,Croatia
+HU,W6100_6220,211.1,Non-renewable waste,Hungary
+IE,W6100_6220,146.8,Non-renewable waste,Ireland
+IT,W6100_6220,1190.1,Non-renewable waste,Italy
+LT,W6100_6220,60.2,Non-renewable waste,Lithuania
+LU,W6100_6220,44.7,Non-renewable waste,Luxembourg
+LV,W6100_6220,52.6,Non-renewable waste,Latvia
+NL,W6100_6220,825.7,Non-renewable waste,Netherlands
+PL,W6100_6220,1069.1,Non-renewable waste,Poland
+PT,W6100_6220,187.1,Non-renewable waste,Portugal
+RO,W6100_6220,281.6,Non-renewable waste,Romania
+SE,W6100_6220,990.8,Non-renewable waste,Sweden
+SI,W6100_6220,57.2,Non-renewable waste,Slovenia
+SK,W6100_6220,235.8,Non-renewable waste,Slovakia
+AT,W6210,191.4,Renewable municipal waste,Austria
+BE,W6210,387.0,Renewable municipal waste,Belgium
+BG,W6210,41.9,Renewable municipal waste,Bulgaria
+CY,W6210,33.1,Renewable municipal waste,Cyprus
+CZ,W6210,95.8,Renewable municipal waste,Czechia
+DE,W6210,3128.7,Renewable municipal waste,Germany
+DK,W6210,546.6,Renewable municipal waste,Denmark
+EE,W6210,25.9,Renewable municipal waste,Estonia
+ES,W6210,236.1,Renewable municipal waste,Spain
+FI,W6210,330.4,Renewable municipal waste,Finland
+FR,W6210,1244.3,Renewable municipal waste,France
+HU,W6210,71.9,Renewable municipal waste,Hungary
+IE,W6210,145.0,Renewable municipal waste,Ireland
+IT,W6210,843.2,Renewable municipal waste,Italy
+LT,W6210,28.2,Renewable municipal waste,Lithuania
+LU,W6210,13.0,Renewable municipal waste,Luxembourg
+LV,W6210,35.5,Renewable municipal waste,Latvia
+NL,W6210,969.3,Renewable municipal waste,Netherlands
+PL,W6210,143.5,Renewable municipal waste,Poland
+PT,W6210,111.6,Renewable municipal waste,Portugal
+RO,W6210,2.0,Renewable municipal waste,Romania
+SE,W6210,966.5,Renewable municipal waste,Sweden
+SK,W6210,31.8,Renewable municipal waste,Slovakia
+AT,W6220,323.9,Non-renewable municipal waste,Austria
+BE,W6220,352.7,Non-renewable municipal waste,Belgium
+CY,W6220,28.6,Non-renewable municipal waste,Cyprus
+CZ,W6220,63.9,Non-renewable municipal waste,Czechia
+DE,W6220,3128.7,Non-renewable municipal waste,Germany
+DK,W6220,447.2,Non-renewable municipal waste,Denmark
+EE,W6220,25.9,Non-renewable municipal waste,Estonia
+ES,W6220,236.1,Non-renewable municipal waste,Spain
+FI,W6220,245.3,Non-renewable municipal waste,Finland
+FR,W6220,1244.3,Non-renewable municipal waste,France
+HU,W6220,62.6,Non-renewable municipal waste,Hungary
+IE,W6220,146.8,Non-renewable municipal waste,Ireland
+IT,W6220,843.2,Non-renewable municipal waste,Italy
+LT,W6220,36.1,Non-renewable municipal waste,Lithuania
+LU,W6220,21.4,Non-renewable municipal waste,Luxembourg
+LV,W6220,42.6,Non-renewable municipal waste,Latvia
+NL,W6220,825.7,Non-renewable municipal waste,Netherlands
+PL,W6220,408.5,Non-renewable municipal waste,Poland
+PT,W6220,87.7,Non-renewable municipal waste,Portugal
+RO,W6220,2.4,Non-renewable municipal waste,Romania
+SE,W6220,892.1,Non-renewable municipal waste,Sweden
+SK,W6220,28.4,Non-renewable municipal waste,Slovakia

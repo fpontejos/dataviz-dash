@@ -7,6 +7,7 @@ from dash.dependencies import Input, Output, State
 import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
+from scipy.fftpack import cc_diff
 
 
 
@@ -14,8 +15,8 @@ import plotly.graph_objs as go
 ## Wrangle the data
 ####################################################################################################################
 
-data_path = 'https://raw.githubusercontent.com/fpontejos/dataviz-dash/main/data/'
-data_path2 = 'data/'
+data_path2 = 'https://raw.githubusercontent.com/fpontejos/dataviz-dash/main/data/'
+data_path = 'data/'
 
 colors = ['#363537', '#fcfcfc', '#bee9e8', '#62b6cb', '#1b4965', '#ffef84', '#c3d37a', '#86b66f', '#0c7c59']
 
@@ -36,6 +37,11 @@ percent_timeseries_tot = pct_data.loc[pct_data['SIEC Code']=='TOTAL']\
 for yi in ts_years:
     percent_timeseries[yi] = round((100*percent_timeseries[yi] / percent_timeseries_tot[yi]), 2)
 
+
+rs_data = pd.read_csv(data_path + 'renewable_sources_2020.csv')
+#print(rs_data.columns)
+rs_country_names = [i for i in rs_data['Country'].unique()]
+
 ######################################################Functions##############################################################
 
 
@@ -44,8 +50,9 @@ for yi in ts_years:
 
 dropdown_cc = dcc.Dropdown(
        id='cc_drop',
-       options=country_codes,
-       multi=True
+       options=rs_country_names,
+       multi=False,
+       value='Austria'
    )
 
 slider_years = dcc.Slider(
@@ -156,16 +163,54 @@ app.layout = html.Div([
 
         html.Div([
             html.Div([
-                html.H3("Which Renewables? "),
                 html.Div([
+                    html.H3("Country Selector"),
+                    html.Div([
+                        dropdown_cc
+                    ], id='country_selector'),
+                ]),
+                html.Div([
+                    html.H3("Placeholder for Sunburst "),
+                    html.Div([
                     
-                ],className='row'),
+                    ], className='placeholder'),
+                ]),
+                ],
+                className='col'),
+            html.Div([
+                html.H3(["Sources of Available Renewable Energy: ", html.Span(id='country_selection')]),
+                html.Div([
+                    html.Div([
+                        html.Div([], id='wind_value', className='energy-value'),
+                        html.Div([
+                            "Wind"
+                        ], className='energy-label'),
+                    ], className='energy-source', id='energy_wind'),
+                    html.Div([
+                        html.Div([], id='solar_value', className='energy-value'),
+                        html.Div(["Solar"], className='energy-label'),
+                    ], className='energy-source', id='energy_solar'),
+                    html.Div([
+                        html.Div([], id='geotherm_value', className='energy-value'),
+                        html.Div(["Geotherm"], className='energy-label'),
+                    ], className='energy-source', id='energy_geotherm'),
+                    html.Div([
+                        html.Div([], id='bio_value', className='energy-value'),
+                        html.Div(["Biomass"], className='energy-label'),
+                    ], className='energy-source', id='energy_bio'),
+                    html.Div([
+                        html.Div([], id='hydro_value', className='energy-value'),
+                        html.Div(["Hydro"], className='energy-label'),
+                    ], className='energy-source', id='energy_hydro'),
+                    html.Div([
+                        html.Div([], id='other_value', className='energy-value'),
+                        html.Div(["Other"], className='energy-label'),
+                    ], className='energy-source', id='energy_other'),
+                ],
+                className='row', id='energy_source_container'),
                 ],
                 className='col ranking_container'),
-            html.Div([
-                html.H3("Placeholder? "),
-                ],
-                className='col placeholder'),
+            
         ],
         className='row'),
 
@@ -189,7 +234,16 @@ app.layout = html.Div([
 
 ######################################################Callbacks#########################################################
 
-
+@app.callback(
+    Output('country_selection', 'children'),
+    Output('solar_value', 'children'),
+    Input(dropdown_cc, 'value')
+)
+def getSelectedCountry(country):
+    
+    a = rs_data.loc[(rs_data['Country']==country)&(rs_data['SIEC Code']=='RA200'),'Consumption in KTOE']
+    return [country,
+            a]
 
 
 @app.callback(

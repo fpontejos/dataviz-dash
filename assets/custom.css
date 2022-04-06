@@ -14,7 +14,7 @@
     --font-color: #363537;
 
     --color1: #363537;
-    --color2: #fcfcfc;
+    --color2: #e9f6f6;
     --color3: #bee9e8;
     --color4: #62b6cb;
     --color5: #3f8098;
@@ -159,4 +159,78 @@ Style input components
 
 .rc-slider-dot-active, .rc-slider-handle {
     border-color: var(--color4);
+}
+
+
+
+/*** Energy Source ****/
+.energy-source-container {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+
+}
+.energy-source {
+    /*border: 1px solid red;*/
+    width: 7em;
+    height: 14em;
+    margin: .5em;
+    padding: 0em;
+    background-color: var(--color2);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#energy_wind {
+    background-image: url('energy_sources/wind.png');
+    background-position: center 1em;
+}
+
+#energy_solar {
+    background-image: url('energy_sources/solar.png');
+}
+
+#energy_geotherm {
+    background-image: url('energy_sources/geotherm.png');
+    background-position: center 1em;
+}
+
+#energy_bio {
+    background-image: url('energy_sources/biomass.png');
+}
+
+#energy_hydro {
+    background-image: url('energy_sources/hydro.png');
+    background-position: center .5em;
+}
+
+#energy_other {
+    background-image: url('energy_sources/other.png');
+}
+.energy-value {
+    text-align: center;
+    font-weight: bold;
+    color: var(--bg-color);
+    font-size: 2em;
+}
+.energy-label {
+    
+    padding: .3em;
+    background-color:rgba(0, 0, 0, 0.2);
+    color: var(--bg-color);
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+
+.Select-input>input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"])
+, .Select-input>input {
+    border: none;
 }
