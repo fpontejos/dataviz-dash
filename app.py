@@ -7,7 +7,6 @@ from dash.dependencies import Input, Output, State
 import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
-from scipy.fftpack import cc_diff
 
 
 
