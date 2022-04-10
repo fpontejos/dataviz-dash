@@ -8,6 +8,8 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
 
+import urllib.request as urllib
+import json
 
 
 ####################################################################################################################
@@ -22,6 +24,11 @@ colors = ['#363537', '#fcfcfc', '#bee9e8', '#62b6cb', '#1b4965', '#ffef84', '#c3
 
 pct_data = pd.read_csv(data_path2 + 'renewables_percent_timeseries.csv')
 pct_data = pct_data.sort_values(by='Country')
+
+pct_data.loc[pct_data['Country']=='Czechia','Country'] = 'Czech Republic'
+
+response = urllib.urlopen(data_path + "europe.geojson")
+europe_json = json.loads(response.read())
 
 country_codes = [i for i in pct_data['Country Code'].unique()]
 country_names = [i for i in pct_data['Country'].unique()]
@@ -42,8 +49,6 @@ rs_data = pd.read_csv(data_path + 'renewable_sources_2020.csv')
 rs_country_names = [i for i in rs_data['Country'].unique()]
 
 ######################################################Functions##############################################################
-
-
 
 ######################################################Interactive Components############################################
 
@@ -144,9 +149,13 @@ app.layout = html.Div([
             ],
             className='col ranking_container'),
         html.Div([
-            html.H3("Choropleth map? Or Scatter vs GDP"),
+            html.H3("Choropleth map"),
+            html.Div([
+                    dcc.Graph(id='eu_choro', style={'width': '95%', 'margin': '0 auto'}),
+            ], id='europe_map')    
             ],
-            className='col'),
+            className='col choro_container'),
+        
     ],
     className='row'),
 
@@ -233,6 +242,8 @@ app.layout = html.Div([
 
 ######################################################Callbacks#########################################################
 
+
+
 @app.callback(
     Output('country_selection', 'children'),
     Output('solar_value', 'children'),
@@ -241,6 +252,7 @@ app.layout = html.Div([
 def getSelectedCountry(country):
     
     a = rs_data.loc[(rs_data['Country']==country)&(rs_data['SIEC Code']=='RA200'),'Consumption in KTOE']
+
     return [country,
             a]
 
@@ -253,12 +265,14 @@ def getSelectedCountry(country):
     Output('top_not_1', 'children'),
     Output('top_not_2', 'children'),
     Output('top_bar', 'figure'),
+    Output('eu_choro', 'figure'),
     Input('slider_years', 'value'),
     
 )
 def getTopPerforming(year_value):
 
     perf_by_year = percent_timeseries.loc[:,['Country', str(year_value), 'Country Code']].sort_values(by=str(year_value), ascending=False).reset_index(drop=True)
+    df_ = percent_timeseries.loc[:,['Country', str(year_value)]]
     
     top_res_return = []
 
@@ -276,7 +290,7 @@ def getTopPerforming(year_value):
             ])
 
     fig_bar = go.Figure()
-    sorted_bar = percent_timeseries.loc[:,['Country', str(year_value)]].sort_values(by=str(year_value), ascending=False)
+    sorted_bar = df_.sort_values(by=str(year_value), ascending=False)
 
     fig_bar.add_trace(dict(type='bar',
                      x=sorted_bar['Country'],
@@ -305,6 +319,17 @@ def getTopPerforming(year_value):
                     size=20
                 ))
 
+    fig_map = go.Figure(go.Choroplethmapbox(geojson=europe_json, 
+                    locations=df_['Country'], z=df_[str(year_value)],
+                    colorscale="Viridis", zmin=0, zmax=100,
+                    marker_opacity=0.5, marker_line_width=0, 
+                    featureidkey="properties.NAME"))
+    fig_map.update_layout(mapbox_style="carto-positron",
+                  mapbox_zoom=2.5, mapbox_center = {"lat": 53, "lon": 5})
+    fig_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+    
+
+
 
     return [
         year_value, 
@@ -314,7 +339,8 @@ def getTopPerforming(year_value):
         top_res_return[3], 
         top_res_return[4],
         #go.Figure(data=data_bar, layout=layout_bar)
-        fig_bar
+        fig_bar, 
+        fig_map
         ]
 
 
