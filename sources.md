@@ -20,3 +20,7 @@ https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Renewable_ene
 
 
 https://github.com/hampusborgos/country-flags
+
+
+https://www.freepik.com/free-vector/energy-types-infographics-solar-wind-hydro-bio-fuel-power-renewable-electricity-plant-electric-water-nuclear-resource_10601030.htm#query=energy%20infographic&position=9&from_view=search
+<a href='https://www.freepik.com/vectors/infographic'>Infographic vector created by macrovector - www.freepik.com</a>
