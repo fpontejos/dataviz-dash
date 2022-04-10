@@ -7,9 +7,12 @@ from dash.dependencies import Input, Output, State
 import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
+import plotly.express as px
 
 import urllib.request as urllib
 import json
+
+from pmdarima import c
 
 
 ####################################################################################################################
@@ -44,8 +47,9 @@ for yi in ts_years:
     percent_timeseries[yi] = round((100*percent_timeseries[yi] / percent_timeseries_tot[yi]), 2)
 
 
-rs_data = pd.read_csv(data_path + 'renewable_sources_2020.csv')
+rs_data = pd.read_csv(data_path2 + 'renewable_sources_2020.csv')
 #print(rs_data.columns)
+rs_data.replace(np.nan, '', inplace=True)
 rs_country_names = [i for i in rs_data['Country'].unique()]
 
 ######################################################Functions##############################################################
@@ -180,11 +184,13 @@ app.layout = html.Div([
                 html.Div([
                     html.H3("Placeholder for Sunburst "),
                     html.Div([
+                        dcc.Graph(id='sunburst_sources', style={'width': '95%', 'margin': '0 auto'}),
                     
-                    ], className='placeholder'),
+                    ], className='sunburst_container'
+                    ),
                 ]),
                 ],
-                className='col'),
+                className='col-7'),
             html.Div([
                 html.H3(["Sources of Available Renewable Energy: ", html.Span(id='country_selection')]),
                 html.Div([
@@ -247,14 +253,69 @@ app.layout = html.Div([
 @app.callback(
     Output('country_selection', 'children'),
     Output('solar_value', 'children'),
+    Output('sunburst_sources', 'figure'),
     Input(dropdown_cc, 'value')
 )
 def getSelectedCountry(country):
     
     a = rs_data.loc[(rs_data['Country']==country)&(rs_data['SIEC Code']=='RA200'),'Consumption in KTOE']
 
+    s_ = rs_data.loc[(rs_data['Country']==country),['Sunburst_SIEC','Sunburst_Parent','Consumption in KTOE']]
+    
+    s_labels = np.append(s_['Sunburst_Parent'].unique(), s_['Sunburst_SIEC'].values)
+    s_parents = np.append([ '' for _ in range(len(s_['Sunburst_Parent'].unique()))], s_['Sunburst_Parent'].values)
+    s_values = np.append([s_.loc[s_['Sunburst_Parent'] == _ ]['Consumption in KTOE'].sum() for _ in s_['Sunburst_Parent'].unique()] , 
+               s_['Consumption in KTOE'])
+
+
+
+    s_ = rs_data.loc[(rs_data['Country']==country),['Sunburst_SIEC','Sunburst_Parent','Consumption in KTOE', 'Renewable']]
+    #print(s_['Renewable'].unique())
+    
+    gparent = pd.DataFrame(s_.groupby(['Sunburst_Parent', 'Renewable']).size()).reset_index().drop(columns=[0])
+    print('*** 0')
+    #print([ gparent.loc[gparent['Sunburst_Parent']==_, 'Renewable'].values[0] for _ in (s_['Sunburst_Parent'].unique()) ])
+    print(s_['Renewable'].unique())
+    print('*** 1')
+    print(s_['Sunburst_Parent'].unique())
+    print('*** 2')
+    print(s_['Sunburst_SIEC'].values)
+    print('*** 3')
+
+    print([ gparent.loc[gparent['Sunburst_Parent']==_, 'Renewable'].values[0] for _ in (s_['Sunburst_Parent'].unique()) ])
+    print('*** 4')
+
+    s_labels = s_['Renewable'].unique().tolist() + \
+                            s_['Sunburst_Parent'].unique().tolist() + \
+                            s_['Sunburst_SIEC'].values.tolist()
+
+    s_parents = ['', ''] + \
+                        [ gparent.loc[gparent['Sunburst_Parent']==_, 'Renewable'].values[0] for _ in (s_['Sunburst_Parent'].unique()) ] + \
+                        s_['Sunburst_Parent'].values.tolist()
+    
+    
+    s_values = [s_.loc[s_['Renewable'] == _ ]['Consumption in KTOE'].sum() for _ in s_['Renewable'].unique()] + \
+                [s_.loc[s_['Sunburst_Parent'] == _ ]['Consumption in KTOE'].sum() for _ in s_['Sunburst_Parent'].unique()] + \
+                s_['Consumption in KTOE'].tolist()
+
+
+    fig_sun = go.Figure(
+        go.Sunburst(
+            labels=s_labels,
+            parents=s_parents,
+            values=s_values,  
+            branchvalues="total",
+            insidetextorientation='radial',
+            marker=dict(colors=colors)
+
+        )
+    )
+    fig_sun.update_layout(margin = dict(t=0, l=0, r=0, b=0))
+
     return [country,
-            a]
+            a,
+            fig_sun
+            ]
 
 
 @app.callback(

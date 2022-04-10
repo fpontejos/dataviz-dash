@@ -237,3 +237,7 @@ Style input components
 
 
 
+.sunburst_container  .svg-container{
+    min-height: 40em;
+    border: 1px solid orange;
+}
