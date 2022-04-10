@@ -273,17 +273,7 @@ def getSelectedCountry(country):
     #print(s_['Renewable'].unique())
     
     gparent = pd.DataFrame(s_.groupby(['Sunburst_Parent', 'Renewable']).size()).reset_index().drop(columns=[0])
-    print('*** 0')
-    #print([ gparent.loc[gparent['Sunburst_Parent']==_, 'Renewable'].values[0] for _ in (s_['Sunburst_Parent'].unique()) ])
-    print(s_['Renewable'].unique())
-    print('*** 1')
-    print(s_['Sunburst_Parent'].unique())
-    print('*** 2')
-    print(s_['Sunburst_SIEC'].values)
-    print('*** 3')
-
-    print([ gparent.loc[gparent['Sunburst_Parent']==_, 'Renewable'].values[0] for _ in (s_['Sunburst_Parent'].unique()) ])
-    print('*** 4')
+    
 
     s_labels = s_['Renewable'].unique().tolist() + \
                             s_['Sunburst_Parent'].unique().tolist() + \
