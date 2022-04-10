@@ -12,7 +12,6 @@ import plotly.express as px
 import urllib.request as urllib
 import json
 
-from pmdarima import c
 
 
 ####################################################################################################################
