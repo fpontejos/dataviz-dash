@@ -23,6 +23,7 @@ data_path2 = 'data/'
 
 colors = ['#363537', '#fcfcfc', '#bee9e8', '#62b6cb', '#1b4965', '#ffef84', '#c3d37a', '#86b66f', '#0c7c59']
 
+sun_colors = ['#1b4965', '#D4D6B9', '#4F486B', '#824670', '#6C6293', '#32213A', '#c3d37a', '#86b66f', '#0c7c59', '#D4D6B9', '#EEC643']
 
 pct_data = pd.read_csv(data_path2 + 'renewables_percent_timeseries.csv')
 pct_data = pct_data.sort_values(by='Country')
@@ -295,7 +296,7 @@ def getSelectedCountry(country):
             values=s_values,  
             branchvalues="total",
             insidetextorientation='radial',
-            marker=dict(colors=colors)
+            marker=dict(colors=sun_colors)
 
         )
     )
