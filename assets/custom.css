@@ -23,10 +23,18 @@
     --color8: #c3d37a;
     --color9: #86b66f;
     --color10: #0c7c59;
+
+    --font-bold: 'Bebas Neue', sans-serif;
+    --font-regular: 'Open Sans', sans-serif;
 }
 
 body {
     background-color: var(--color3);
+    font-family: var(--font-regular);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bold);
 }
 .outer {
     margin-top: 2em;
@@ -70,12 +78,20 @@ body {
 
 
 }
+.top_container {
+    z-index: 10;
+    margin-top: 8em;
+}
+
+#top_bar {
+    border: 0px solid green;
+    max-height: 20em;
+}
 .toprow_container {
     display: flex;
     flex-direction: column;
     /*justify-content: end;*/
     border: 1px solid orange;
-    margin-top: 9em;
     z-index: 10;
 }
 .notes {
@@ -89,6 +105,7 @@ body {
     min-width: 450px;
     margin-top: 3em;
     height: 18em;
+    
 }
 
 .top_eu {
@@ -100,6 +117,7 @@ body {
 
 .top_eu_row {
     margin-bottom: 2em;
+    border: 1px solid red;
 }
 .top_perf {
     /*border: 1px solid cyan;*/
@@ -107,6 +125,9 @@ body {
 
 }
 
+.choro_container {
+    margin-top: 0em;
+}
 .placeholder {
     border: 1px solid orange;
     z-index: 10
@@ -121,8 +142,8 @@ body {
 }
 
 .country_flag {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     margin: 0 auto;
     padding: 0;
     border-radius: 5%;
@@ -171,10 +192,10 @@ Style input components
 
 }
 .energy-source {
-    /*border: 1px solid red;*/
-    width: 7em;
-    height: 14em;
-    margin: .5em;
+    border: 0px solid red;
+    width: 4em;
+    height: 8em;
+    margin: .15em;
     padding: 0em;
     background-color: var(--color2);
     background-position: center center;
@@ -185,6 +206,21 @@ Style input components
     display: flex;
     flex-direction: column;
     justify-content: end;
+
+    font-family: var(--font-bold);
+    z-index: 0;
+}
+
+.energy-source::before {
+    border: 0px solid blue;
+    content: ' ';
+    height: 8em;
+    width: 4em;
+    background-color: rgba(255,255,255, 0.3);
+    /*background-color: rgba(0, 0, 0, 0.4);*/
+    position: absolute;
+    z-index: 10;
+
 }
 
 #energy_wind {
@@ -216,17 +252,20 @@ Style input components
 .energy-value {
     text-align: center;
     font-weight: bold;
-    color: var(--bg-color);
     font-size: 2em;
+    z-index: 20;
+    line-height: 1em;
+
 }
 .energy-label {
-    
     padding: .3em;
     background-color:rgba(0, 0, 0, 0.2);
-    color: var(--bg-color);
+    background-color: rgba(255,255,255, 0.25);
+    
     text-align: center;
     text-transform: uppercase;
-
+    
+    z-index: 20;
 }
 
 
@@ -240,4 +279,25 @@ Style input components
 .sunburst_container  .svg-container{
     min-height: 40em;
 
+}
+
+
+.country_profile_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.country_profile_label {
+    margin-right: 1em;
+}
+
+.country_profile_label h3 {
+    margin: 0;
+}
+
+.country_profile_selector {
+    flex: 1 0 auto;
+    font-family: var(--font-bold);
+    font-size: 1.5em;
 }

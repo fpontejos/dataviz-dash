@@ -4,16 +4,23 @@ from dash import dash_table, html, dcc
 #import dash_core_components as dcc
 #import dash_html_components as html
 from dash.dependencies import Input, Output, State
+from matplotlib.pyplot import get
 import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
-import plotly.express as px
+#import plotly.express as px
+
+from matplotlib import cm
 
 import urllib.request as urllib
 import json
 
 
 
+external_stylesheets = [
+    'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap',
+    'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'
+]
 ####################################################################################################################
 ## Wrangle the data
 ####################################################################################################################
@@ -54,6 +61,20 @@ rs_country_names = [i for i in rs_data['Country'].unique()]
 
 ######################################################Functions##############################################################
 
+
+def get_color_bins(color):
+    cmap = cm.get_cmap('viridis')
+    if color > 80 :
+        return 80
+    elif color > 60 :
+        return 60
+    elif color > 40 :
+        return 40
+    elif color > 20 :
+        return 20
+    else:
+        return 0
+    
 ######################################################Interactive Components############################################
 
 dropdown_cc = dcc.Dropdown(
@@ -75,14 +96,17 @@ slider_years = dcc.Slider(
    )
 
 
-######## 
+########
 
 
 ##################################################APP###################################################################
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+app.css.config.serve_locally = True
 
 server = app.server
+
 
 app.layout = html.Div([
 
@@ -95,18 +119,56 @@ app.layout = html.Div([
         html.Div(className='hero-bg'),
 
         html.Div([
-            html.H1('EU Renewable Energy Directive'),
-            html.P("Some text here")
+            html.H1('Sources of Energy in European Countries'),
+            html.P("Where does it come from and where is it going?")
         ],className='hero-title is-marginless'),
-        
-    ], 
+
+    ],
     className='row hero'),
 
 
      ########## First Row ##########
+
     html.Div([
+
+            html.Div([
+                html.H3("Energy consumption"),
+                html.P("Percentage of energy consumed derived from renewable sources."),
+                dcc.Graph(id='eu_choro')
+            ], className='col choro_container'),
+
+            html.Div([
+
+            html.Div([
+                #html.H3("Countries' Performance"),
+                html.Br(),
+                html.P("Performance of each country over time. Year can be changed using the slider below."),
+                html.Div([
+                    dcc.Graph(id='top_bar', style={'width': '95%', 'margin': '0 auto'}),
+                    #html.Div([], id='top_bar', className='placeholder'),
+                ],className='row'),
+                ],
+            className='ranking_container'),
+
+
+            ], className='col top_container'),
+
+
+
+        ], className='row'),
+
+            ########## Slider Row ##########
+
+    html.Div([
+        html.Div([slider_years],className='col holder'),
+    ], className='row'),
+
+
+
+    html.Div([
+
         html.Div([
-            html.H2(["Top Performing Countries: ",html.Span(id='title_top_year')]),
+            html.H2(["Top 5 Countries: xx",html.Span(id='title_top_year')]),
             html.Div([
                 html.Div([], id='top_eu_1', className='col top_eu'),
                 html.Div([], id='top_eu_2', className='col top_eu'),
@@ -115,6 +177,12 @@ app.layout = html.Div([
                 html.Div([], id='top_not_2', className='col top_eu'),
 
             ],className='row top_eu_row'),
+
+
+
+
+
+
             html.Div([
                 #html.Div([], id='top_not_1', className='col top_eu'),
                 #html.Div([], id='top_not_2', className='col top_eu'),
@@ -124,44 +192,27 @@ app.layout = html.Div([
             ],className='row')
             ],
             className='col top_perf_container'),
-        html.Div([
-            html.Div([
-                html.P("Some text here anbout the sliders")
-            ], className="notes"),
-            ],
-            className='col toprow_container'),
+
+
     ],
     className='row'),
-
-     ########## Slider Row ##########
-
-    html.Div([
-        html.Div([slider_years],className='col holder'),
-    ], className='row'),
-        
-
 
 
     ########## Second Row ##########
     html.Div([
+
+
         html.Div([
-            html.H3("Performance of All Countries: "),
             html.Div([
-                dcc.Graph(id='top_bar', style={'width': '95%', 'margin': '0 auto'}),
-                #html.Div([], id='top_bar', className='placeholder'),
-            ],className='row'),
+                html.P("Some text here about the sliders")
+            ], className="notes"),
             ],
-            className='col ranking_container'),
-        html.Div([
-            html.H3("Choropleth map"),
-            html.Div([
-                    dcc.Graph(id='eu_choro', style={'width': '95%', 'margin': '0 auto'}),
-            ], id='europe_map')    
-            ],
-            className='col choro_container'),
-        
+            className='col toprow_container'),
+
     ],
     className='row'),
+
+
 
 
     ], className='card'),
@@ -176,23 +227,33 @@ app.layout = html.Div([
         html.Div([
             html.Div([
                 html.Div([
-                    html.H3("Country Selector"),
-                    html.Div([
-                        dropdown_cc
-                    ], id='country_selector'),
-                ]),
+                        html.Div([
+                            html.H3("Country Profile: ")
+                            ], className="country_profile_label"),
+                        html.Div([
+                            dropdown_cc
+                        ], id='country_selector', className="country_profile_selector"),
+                    ], className="country_profile_title"),
+
+            ], className='col-7'),
+            html.Div(className='col'),
+        ], className="row"),
+
+        html.Div([
+            html.Div([
+                
                 html.Div([
-                    html.H3("Placeholder for Sunburst "),
+                    html.H4("Distribution of All Sources of Energy "),
                     html.Div([
                         dcc.Graph(id='sunburst_sources', style={'width': '95%', 'margin': '0 auto'}),
-                    
+
                     ], className='sunburst_container'
                     ),
                 ]),
                 ],
                 className='col-7'),
             html.Div([
-                html.H3(["Sources of Available Renewable Energy: ", html.Span(id='country_selection')]),
+                html.H4(["Available Renewable Energy Sources in 2020: (KTOE) ", html.Span(id='country_selection')]),
                 html.Div([
                     html.Div([
                         html.Div([], id='wind_value', className='energy-value'),
@@ -224,7 +285,7 @@ app.layout = html.Div([
                 className='row', id='energy_source_container'),
                 ],
                 className='col ranking_container'),
-            
+
         ],
         className='row'),
 
@@ -251,29 +312,39 @@ app.layout = html.Div([
 
 
 @app.callback(
-    Output('country_selection', 'children'),
+    #Output('country_selection', 'children'),
     Output('solar_value', 'children'),
+    Output('wind_value', 'children'),
+    Output('hydro_value', 'children'),
+    Output('geotherm_value', 'children'),
+    Output('bio_value', 'children'),
+    Output('other_value', 'children'),
+
     Output('sunburst_sources', 'figure'),
     Input(dropdown_cc, 'value')
 )
 def getSelectedCountry(country):
+    so_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Other Renewable')].sum()['Consumption in KTOE']
+    sb_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Biomass')].sum()['Consumption in KTOE']
+    sh_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Hydro')].sum()['Consumption in KTOE']
+    sg_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Geothermal')].sum()['Consumption in KTOE']
+    sw_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Wind')].sum()['Consumption in KTOE']
+    ss_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Solar')].sum()['Consumption in KTOE']
     
-    a = rs_data.loc[(rs_data['Country']==country)&(rs_data['SIEC Code']=='RA200'),'Consumption in KTOE']
-
     s_ = rs_data.loc[(rs_data['Country']==country),['Sunburst_SIEC','Sunburst_Parent','Consumption in KTOE']]
-    
+
     s_labels = np.append(s_['Sunburst_Parent'].unique(), s_['Sunburst_SIEC'].values)
     s_parents = np.append([ '' for _ in range(len(s_['Sunburst_Parent'].unique()))], s_['Sunburst_Parent'].values)
-    s_values = np.append([s_.loc[s_['Sunburst_Parent'] == _ ]['Consumption in KTOE'].sum() for _ in s_['Sunburst_Parent'].unique()] , 
+    s_values = np.append([s_.loc[s_['Sunburst_Parent'] == _ ]['Consumption in KTOE'].sum() for _ in s_['Sunburst_Parent'].unique()] ,
                s_['Consumption in KTOE'])
 
 
 
     s_ = rs_data.loc[(rs_data['Country']==country),['Sunburst_SIEC','Sunburst_Parent','Consumption in KTOE', 'Renewable']]
     #print(s_['Renewable'].unique())
-    
+
     gparent = pd.DataFrame(s_.groupby(['Sunburst_Parent', 'Renewable']).size()).reset_index().drop(columns=[0])
-    
+
 
     s_labels = s_['Renewable'].unique().tolist() + \
                             s_['Sunburst_Parent'].unique().tolist() + \
@@ -282,8 +353,8 @@ def getSelectedCountry(country):
     s_parents = ['', ''] + \
                         [ gparent.loc[gparent['Sunburst_Parent']==_, 'Renewable'].values[0] for _ in (s_['Sunburst_Parent'].unique()) ] + \
                         s_['Sunburst_Parent'].values.tolist()
-    
-    
+
+
     s_values = [s_.loc[s_['Renewable'] == _ ]['Consumption in KTOE'].sum() for _ in s_['Renewable'].unique()] + \
                 [s_.loc[s_['Sunburst_Parent'] == _ ]['Consumption in KTOE'].sum() for _ in s_['Sunburst_Parent'].unique()] + \
                 s_['Consumption in KTOE'].tolist()
@@ -293,7 +364,7 @@ def getSelectedCountry(country):
         go.Sunburst(
             labels=s_labels,
             parents=s_parents,
-            values=s_values,  
+            values=s_values,
             branchvalues="total",
             insidetextorientation='radial',
             marker=dict(colors=sun_colors)
@@ -302,8 +373,13 @@ def getSelectedCountry(country):
     )
     fig_sun.update_layout(margin = dict(t=0, l=0, r=0, b=0))
 
-    return [country,
-            a,
+    return [ #country,
+            round(ss_),
+            round(sw_),
+            round(sh_),
+            round(sg_),
+            round(sb_),
+            round(so_),
             fig_sun
             ]
 
@@ -318,13 +394,13 @@ def getSelectedCountry(country):
     Output('top_bar', 'figure'),
     Output('eu_choro', 'figure'),
     Input('slider_years', 'value'),
-    
+
 )
 def getTopPerforming(year_value):
 
     perf_by_year = percent_timeseries.loc[:,['Country', str(year_value), 'Country Code']].sort_values(by=str(year_value), ascending=False).reset_index(drop=True)
     df_ = percent_timeseries.loc[:,['Country', str(year_value)]]
-    
+
     top_res_return = []
 
     for ti in range(5):
@@ -334,8 +410,8 @@ def getTopPerforming(year_value):
                 html.Div(className='country_flag', id="top_flag_"+perf_by_year.iloc[ti,2],
                         style={"background-image": f_}
                 ),
-                html.H4(perf_by_year.iloc[ti,0]),
-                html.H5(str(perf_by_year.iloc[ti,1])+" %")
+                html.P(perf_by_year.iloc[ti,0]),
+                html.P(str(perf_by_year.iloc[ti,1])+" %")
             ], className='top_perf'
             )
             ])
@@ -353,44 +429,49 @@ def getTopPerforming(year_value):
                     )
                )
 #
-    fig_bar.update_layout(dict(title=dict(text='Percentage of consumption using renewables', x=.5),
+    fig_bar.update_layout(dict(
                     yaxis=dict(range=[0,100]),
                     paper_bgcolor=colors[1],
                     plot_bgcolor='#e9f6f6',
-                    margin=dict(r=10, t=50, l=10)
+                    margin=dict(r=10, t=0, l=10)
 
                   ))
     fig_bar.update_xaxes(tickangle=270)
 
     fig_bar.add_annotation(text="Year "+str(year_value),
                   xref="paper", yref="paper",
-                  x=.99, y=.99, showarrow=False, 
+                  x=.99, y=.99, showarrow=False,
                   font=dict(
                     color=colors[4],
                     size=20
                 ))
 
-    fig_map = go.Figure(go.Choroplethmapbox(geojson=europe_json, 
-                    locations=df_['Country'], z=df_[str(year_value)],
-                    colorscale="Viridis", zmin=0, zmax=100,
-                    marker_opacity=0.5, marker_line_width=0, 
+    ########################### Choropleth ###########################
+    fig_map = go.Figure(go.Choroplethmapbox(geojson=europe_json,
+                    locations=df_['Country'], z=df_[str(year_value)].apply(lambda x: get_color_bins(x)),
+                    colorscale="Viridis", 
+                    zmin=0, zmax=100,
+                    customdata=df_[str(year_value)],
+                    name='Percent From Renewables',
+                    marker_opacity=0.5, marker_line_width=0,
                     featureidkey="properties.NAME"))
     fig_map.update_layout(mapbox_style="carto-positron",
                   mapbox_zoom=2.5, mapbox_center = {"lat": 53, "lon": 5})
     fig_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-    
+    fig_map.update_traces(hovertemplate="%{location}: %{customdata}")
+
 
 
 
     return [
-        year_value, 
-        top_res_return[0], 
-        top_res_return[1], 
-        top_res_return[2], 
-        top_res_return[3], 
+        year_value,
+        top_res_return[0],
+        top_res_return[1],
+        top_res_return[2],
+        top_res_return[3],
         top_res_return[4],
         #go.Figure(data=data_bar, layout=layout_bar)
-        fig_bar, 
+        fig_bar,
         fig_map
         ]
 

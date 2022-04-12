@@ -334,33 +334,33 @@ RO,PP_OTH,1243.2,Other petroleum products,Romania,Oil and petroleum products,Non
 SE,PP_OTH,2051.3,Other petroleum products,Sweden,Oil and petroleum products,Non-renewable,Oil and petroleum products,Other petroleum products
 SI,PP_OTH,289.7,Other petroleum products,Slovenia,Oil and petroleum products,Non-renewable,Oil and petroleum products,Other petroleum products
 SK,PP_OTH,534.0,Other petroleum products,Slovakia,Oil and petroleum products,Non-renewable,Oil and petroleum products,Other petroleum products
-AT,R5110-5150_W6000RI,5059.3,Primary solid biofuels,Austria,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-BE,R5110-5150_W6000RI,1842.7,Primary solid biofuels,Belgium,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-BG,R5110-5150_W6000RI,1737.1,Primary solid biofuels,Bulgaria,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-CY,R5110-5150_W6000RI,27.4,Primary solid biofuels,Cyprus,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-CZ,R5110-5150_W6000RI,3670.0,Primary solid biofuels,Czechia,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-DE,R5110-5150_W6000RI,13564.7,Primary solid biofuels,Germany,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-DK,R5110-5150_W6000RI,2992.8,Primary solid biofuels,Denmark,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-EE,R5110-5150_W6000RI,1747.4,Primary solid biofuels,Estonia,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-EL,R5110-5150_W6000RI,794.3,Primary solid biofuels,Greece,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-ES,R5110-5150_W6000RI,5053.7,Primary solid biofuels,Spain,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-FI,R5110-5150_W6000RI,8451.8,Primary solid biofuels,Finland,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-FR,R5110-5150_W6000RI,10088.2,Primary solid biofuels,France,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-HR,R5110-5150_W6000RI,1559.5,Primary solid biofuels,Croatia,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-HU,R5110-5150_W6000RI,2074.6,Primary solid biofuels,Hungary,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-IE,R5110-5150_W6000RI,283.2,Primary solid biofuels,Ireland,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-IT,R5110-5150_W6000RI,8378.1,Primary solid biofuels,Italy,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-LT,R5110-5150_W6000RI,1431.1,Primary solid biofuels,Lithuania,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-LU,R5110-5150_W6000RI,187.0,Primary solid biofuels,Luxembourg,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-LV,R5110-5150_W6000RI,2817.2,Primary solid biofuels,Latvia,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-MT,R5110-5150_W6000RI,1.4,Primary solid biofuels,Malta,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-NL,R5110-5150_W6000RI,2533.8,Primary solid biofuels,Netherlands,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-PL,R5110-5150_W6000RI,9615.0,Primary solid biofuels,Poland,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-PT,R5110-5150_W6000RI,2959.6,Primary solid biofuels,Portugal,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-RO,R5110-5150_W6000RI,3572.3,Primary solid biofuels,Romania,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-SE,R5110-5150_W6000RI,9951.5,Primary solid biofuels,Sweden,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-SI,R5110-5150_W6000RI,529.0,Primary solid biofuels,Slovenia,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
-SK,R5110-5150_W6000RI,1322.8,Primary solid biofuels,Slovakia,Other Renewable,Renewable,Other Renewable,Primary solid biofuels
+AT,R5110-5150_W6000RI,5059.3,Primary solid biofuels,Austria,Biomass,Renewable,Biomass,Primary solid biofuels
+BE,R5110-5150_W6000RI,1842.7,Primary solid biofuels,Belgium,Biomass,Renewable,Biomass,Primary solid biofuels
+BG,R5110-5150_W6000RI,1737.1,Primary solid biofuels,Bulgaria,Biomass,Renewable,Biomass,Primary solid biofuels
+CY,R5110-5150_W6000RI,27.4,Primary solid biofuels,Cyprus,Biomass,Renewable,Biomass,Primary solid biofuels
+CZ,R5110-5150_W6000RI,3670.0,Primary solid biofuels,Czechia,Biomass,Renewable,Biomass,Primary solid biofuels
+DE,R5110-5150_W6000RI,13564.7,Primary solid biofuels,Germany,Biomass,Renewable,Biomass,Primary solid biofuels
+DK,R5110-5150_W6000RI,2992.8,Primary solid biofuels,Denmark,Biomass,Renewable,Biomass,Primary solid biofuels
+EE,R5110-5150_W6000RI,1747.4,Primary solid biofuels,Estonia,Biomass,Renewable,Biomass,Primary solid biofuels
+EL,R5110-5150_W6000RI,794.3,Primary solid biofuels,Greece,Biomass,Renewable,Biomass,Primary solid biofuels
+ES,R5110-5150_W6000RI,5053.7,Primary solid biofuels,Spain,Biomass,Renewable,Biomass,Primary solid biofuels
+FI,R5110-5150_W6000RI,8451.8,Primary solid biofuels,Finland,Biomass,Renewable,Biomass,Primary solid biofuels
+FR,R5110-5150_W6000RI,10088.2,Primary solid biofuels,France,Biomass,Renewable,Biomass,Primary solid biofuels
+HR,R5110-5150_W6000RI,1559.5,Primary solid biofuels,Croatia,Biomass,Renewable,Biomass,Primary solid biofuels
+HU,R5110-5150_W6000RI,2074.6,Primary solid biofuels,Hungary,Biomass,Renewable,Biomass,Primary solid biofuels
+IE,R5110-5150_W6000RI,283.2,Primary solid biofuels,Ireland,Biomass,Renewable,Biomass,Primary solid biofuels
+IT,R5110-5150_W6000RI,8378.1,Primary solid biofuels,Italy,Biomass,Renewable,Biomass,Primary solid biofuels
+LT,R5110-5150_W6000RI,1431.1,Primary solid biofuels,Lithuania,Biomass,Renewable,Biomass,Primary solid biofuels
+LU,R5110-5150_W6000RI,187.0,Primary solid biofuels,Luxembourg,Biomass,Renewable,Biomass,Primary solid biofuels
+LV,R5110-5150_W6000RI,2817.2,Primary solid biofuels,Latvia,Biomass,Renewable,Biomass,Primary solid biofuels
+MT,R5110-5150_W6000RI,1.4,Primary solid biofuels,Malta,Biomass,Renewable,Biomass,Primary solid biofuels
+NL,R5110-5150_W6000RI,2533.8,Primary solid biofuels,Netherlands,Biomass,Renewable,Biomass,Primary solid biofuels
+PL,R5110-5150_W6000RI,9615.0,Primary solid biofuels,Poland,Biomass,Renewable,Biomass,Primary solid biofuels
+PT,R5110-5150_W6000RI,2959.6,Primary solid biofuels,Portugal,Biomass,Renewable,Biomass,Primary solid biofuels
+RO,R5110-5150_W6000RI,3572.3,Primary solid biofuels,Romania,Biomass,Renewable,Biomass,Primary solid biofuels
+SE,R5110-5150_W6000RI,9951.5,Primary solid biofuels,Sweden,Biomass,Renewable,Biomass,Primary solid biofuels
+SI,R5110-5150_W6000RI,529.0,Primary solid biofuels,Slovenia,Biomass,Renewable,Biomass,Primary solid biofuels
+SK,R5110-5150_W6000RI,1322.8,Primary solid biofuels,Slovakia,Biomass,Renewable,Biomass,Primary solid biofuels
 AT,R5200,858.5,Liquid biofuels,Austria,Biomass,Renewable,Biomass,Liquid biofuels
 BE,R5200,1131.1,Liquid biofuels,Belgium,Biomass,Renewable,Biomass,Liquid biofuels
 BG,R5200,219.9,Liquid biofuels,Bulgaria,Biomass,Renewable,Biomass,Liquid biofuels
