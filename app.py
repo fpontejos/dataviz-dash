@@ -4,13 +4,11 @@ from dash import dash_table, html, dcc
 #import dash_core_components as dcc
 #import dash_html_components as html
 from dash.dependencies import Input, Output, State
-from matplotlib.pyplot import get
+
 import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
-#import plotly.express as px
 
-from matplotlib import cm
 
 import urllib.request as urllib
 import json
@@ -372,6 +370,15 @@ def getSelectedCountry(country):
         )
     )
     fig_sun.update_layout(margin = dict(t=0, l=0, r=0, b=0))
+
+
+
+    #fig_gdp = go.Figure()
+
+    # Add traces
+    #fig_gdp.add_trace(go.Scatter(x=random_x, y=random_y0,
+    #                mode='markers',
+    #                name='markers'))
 
     return [ #country,
             round(ss_),
