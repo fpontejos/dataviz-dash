@@ -61,7 +61,7 @@ rs_country_names = [i for i in rs_data['Country'].unique()]
 
 
 def get_color_bins(color):
-    cmap = cm.get_cmap('viridis')
+    
     if color > 80 :
         return 80
     elif color > 60 :
