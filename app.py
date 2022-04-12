@@ -49,12 +49,15 @@ percent_timeseries_tot = pct_data.loc[pct_data['SIEC Code']=='TOTAL']\
 
 
 gdp_data = pd.read_csv(data_path2 + 'gdp_data.csv')
+gdp_data.loc[gdp_data['Country']=='Czechia','Country'] = 'Czech Republic'
 
 for yi in ts_years:
     percent_timeseries[yi] = round((100*percent_timeseries[yi] / percent_timeseries_tot[yi]), 2)
 
 
 rs_data = pd.read_csv(data_path2 + 'renewable_sources_2020.csv')
+rs_data.loc[rs_data['Country']=='Czechia','Country'] = 'Czech Republic'
+
 #print(rs_data.columns)
 rs_data.replace(np.nan, '', inplace=True)
 rs_country_names = country_names #[i for i in rs_data['Country'].unique()]
@@ -243,7 +246,7 @@ app.layout = html.Div([
             html.Div([
                 
                 html.Div([
-                    html.H4("Distribution of All Sources of Energy "),
+                    html.H4("Distribution of All Sources of Energy (2020)"),
                     html.Div([
                         dcc.Graph(id='sunburst_sources', style={'width': '95%', 'margin': '0 auto'}),
 
@@ -337,17 +340,34 @@ def getSelectedCountry(country):
     fig_sun.update_layout(margin = dict(t=0, l=0, r=0, b=0))
 
 
-    print(country)
-    gdp_x = gdp_data.loc[gdp_data['Country']==country, ts_years].T.iloc[:,0]
-
-    gdp_y = percent_timeseries.loc[percent_timeseries['Country']==country, ts_years].T.iloc[:,0]
 
     #fig_gdp = go.Figure()
     #Add traces
-    fig_gdp = go.Figure(go.Scatter(x=gdp_x, y=gdp_y,
+    fig_gdp = go.Figure()
+    for c_ in country_names:
+        gdp_x = gdp_data.loc[gdp_data['Country']==c_, ts_years].T.iloc[:,0]
+        gdp_y = percent_timeseries.loc[percent_timeseries['Country']==c_, ts_years].T.iloc[:,0]
+        if c_ != country:
+            fig_gdp.add_trace(go.Scatter(x=gdp_x, y=gdp_y,
+                    text=ts_years,
+                    mode='markers',
+                    name=c_,
+                    opacity=.25,
+                    marker=dict(color='#bbbbbb')
+                    #visible='legendonly'
+                    ))
+            fig_gdp.update_traces(showlegend=False)
+
+        if c_ == country:
+            fig_gdp.add_trace(go.Scatter(x=gdp_x, y=gdp_y,
                     text=ts_years,
                     mode='lines+markers',
+                    name=c_,
+                    marker=dict(color=sun_colors[0])
+
                     ))
+
+
 
 
     fig_gdp.update_layout(
