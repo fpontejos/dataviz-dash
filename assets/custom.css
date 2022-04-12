@@ -301,3 +301,13 @@ Style input components
     font-family: var(--font-bold);
     font-size: 1.5em;
 }
+
+
+
+.gdp_container {
+    padding: .25em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    min-height: 16em;
+}

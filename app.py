@@ -38,8 +38,7 @@ pct_data.loc[pct_data['Country']=='Czechia','Country'] = 'Czech Republic'
 response = urllib.urlopen(data_path + "europe.geojson")
 europe_json = json.loads(response.read())
 
-country_codes = [i for i in pct_data['Country Code'].unique()]
-country_names = [i for i in pct_data['Country'].unique()]
+country_names = sorted([i for i in pct_data['Country'].unique()])
 
 ts_years = [str(i) for i in range(2004, 2021)]
 
@@ -48,6 +47,9 @@ percent_timeseries = pct_data.loc[pct_data['SIEC Code']=='RA000']\
 percent_timeseries_tot = pct_data.loc[pct_data['SIEC Code']=='TOTAL']\
                                  .reset_index(drop=True)
 
+
+gdp_data = pd.read_csv(data_path2 + 'gdp_data.csv')
+
 for yi in ts_years:
     percent_timeseries[yi] = round((100*percent_timeseries[yi] / percent_timeseries_tot[yi]), 2)
 
@@ -55,7 +57,7 @@ for yi in ts_years:
 rs_data = pd.read_csv(data_path2 + 'renewable_sources_2020.csv')
 #print(rs_data.columns)
 rs_data.replace(np.nan, '', inplace=True)
-rs_country_names = [i for i in rs_data['Country'].unique()]
+rs_country_names = country_names #[i for i in rs_data['Country'].unique()]
 
 ######################################################Functions##############################################################
 
@@ -140,7 +142,7 @@ app.layout = html.Div([
             html.Div([
                 #html.H3("Countries' Performance"),
                 html.Br(),
-                html.P("Performance of each country over time. Year can be changed using the slider below."),
+                html.P("Performance of each country for specific years. Year can be changed using the slider below."),
                 html.Div([
                     dcc.Graph(id='top_bar', style={'width': '95%', 'margin': '0 auto'}),
                     #html.Div([], id='top_bar', className='placeholder'),
@@ -249,38 +251,12 @@ app.layout = html.Div([
                     ),
                 ]),
                 ],
-                className='col-7'),
+                className='col-6'),
             html.Div([
-                html.H4(["Available Renewable Energy Sources in 2020: (KTOE) ", html.Span(id='country_selection')]),
                 html.Div([
-                    html.Div([
-                        html.Div([], id='wind_value', className='energy-value'),
-                        html.Div([
-                            "Wind"
-                        ], className='energy-label'),
-                    ], className='energy-source', id='energy_wind'),
-                    html.Div([
-                        html.Div([], id='solar_value', className='energy-value'),
-                        html.Div(["Solar"], className='energy-label'),
-                    ], className='energy-source', id='energy_solar'),
-                    html.Div([
-                        html.Div([], id='geotherm_value', className='energy-value'),
-                        html.Div(["Geotherm"], className='energy-label'),
-                    ], className='energy-source', id='energy_geotherm'),
-                    html.Div([
-                        html.Div([], id='bio_value', className='energy-value'),
-                        html.Div(["Biomass"], className='energy-label'),
-                    ], className='energy-source', id='energy_bio'),
-                    html.Div([
-                        html.Div([], id='hydro_value', className='energy-value'),
-                        html.Div(["Hydro"], className='energy-label'),
-                    ], className='energy-source', id='energy_hydro'),
-                    html.Div([
-                        html.Div([], id='other_value', className='energy-value'),
-                        html.Div(["Other"], className='energy-label'),
-                    ], className='energy-source', id='energy_other'),
-                ],
-                className='row', id='energy_source_container'),
+                        html.H4(["GDP of ", html.Span(id='country_selection')]),
+                        dcc.Graph(id='gdp_pct_ts', style={'width': '95%', 'margin': '0 auto'}),
+                ], ),
                 ],
                 className='col ranking_container'),
 
@@ -310,33 +286,22 @@ app.layout = html.Div([
 
 
 @app.callback(
-    #Output('country_selection', 'children'),
-    Output('solar_value', 'children'),
-    Output('wind_value', 'children'),
-    Output('hydro_value', 'children'),
-    Output('geotherm_value', 'children'),
-    Output('bio_value', 'children'),
-    Output('other_value', 'children'),
+    Output('country_selection', 'children'),
+    #Output('solar_value', 'children'),
+    #Output('wind_value', 'children'),
+    #Output('hydro_value', 'children'),
+    #Output('geotherm_value', 'children'),
+    #Output('bio_value', 'children'),
+    #Output('other_value', 'children'),
 
     Output('sunburst_sources', 'figure'),
+    Output('gdp_pct_ts', 'figure'),
+
     Input(dropdown_cc, 'value')
 )
 def getSelectedCountry(country):
     so_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Other Renewable')].sum()['Consumption in KTOE']
-    sb_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Biomass')].sum()['Consumption in KTOE']
-    sh_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Hydro')].sum()['Consumption in KTOE']
-    sg_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Geothermal')].sum()['Consumption in KTOE']
-    sw_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Wind')].sum()['Consumption in KTOE']
-    ss_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Solar')].sum()['Consumption in KTOE']
     
-    s_ = rs_data.loc[(rs_data['Country']==country),['Sunburst_SIEC','Sunburst_Parent','Consumption in KTOE']]
-
-    s_labels = np.append(s_['Sunburst_Parent'].unique(), s_['Sunburst_SIEC'].values)
-    s_parents = np.append([ '' for _ in range(len(s_['Sunburst_Parent'].unique()))], s_['Sunburst_Parent'].values)
-    s_values = np.append([s_.loc[s_['Sunburst_Parent'] == _ ]['Consumption in KTOE'].sum() for _ in s_['Sunburst_Parent'].unique()] ,
-               s_['Consumption in KTOE'])
-
-
 
     s_ = rs_data.loc[(rs_data['Country']==country),['Sunburst_SIEC','Sunburst_Parent','Consumption in KTOE', 'Renewable']]
     #print(s_['Renewable'].unique())
@@ -372,23 +337,28 @@ def getSelectedCountry(country):
     fig_sun.update_layout(margin = dict(t=0, l=0, r=0, b=0))
 
 
+    print(country)
+    gdp_x = gdp_data.loc[gdp_data['Country']==country, ts_years].T.iloc[:,0]
+
+    gdp_y = percent_timeseries.loc[percent_timeseries['Country']==country, ts_years].T.iloc[:,0]
 
     #fig_gdp = go.Figure()
+    #Add traces
+    fig_gdp = go.Figure(go.Scatter(x=gdp_x, y=gdp_y,
+                    text=ts_years,
+                    mode='lines+markers',
+                    ))
 
-    # Add traces
-    #fig_gdp.add_trace(go.Scatter(x=random_x, y=random_y0,
-    #                mode='markers',
-    #                name='markers'))
 
-    return [ #country,
-            round(ss_),
-            round(sw_),
-            round(sh_),
-            round(sg_),
-            round(sb_),
-            round(so_),
-            fig_sun
-            ]
+    fig_gdp.update_layout(
+        xaxis_title="GDP in Million Euros",
+        yaxis_title="Percentage Renewables",
+        
+    )
+
+    fig_gdp.update_layout(margin = dict(t=0, l=0, r=0, b=0))
+
+    return [country, fig_sun, fig_gdp]
 
 
 @app.callback(
