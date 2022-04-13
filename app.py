@@ -170,52 +170,6 @@ app.layout = html.Div([
 
 
 
-    html.Div([
-
-        html.Div([
-            html.H2(["Top 5 Countries: xx",html.Span(id='title_top_year')]),
-            html.Div([
-                html.Div([], id='top_eu_1', className='col top_eu'),
-                html.Div([], id='top_eu_2', className='col top_eu'),
-                html.Div([], id='top_eu_3', className='col top_eu'),
-                html.Div([], id='top_not_1', className='col top_eu'),
-                html.Div([], id='top_not_2', className='col top_eu'),
-
-            ],className='row top_eu_row'),
-
-
-
-
-
-
-            html.Div([
-                #html.Div([], id='top_not_1', className='col top_eu'),
-                #html.Div([], id='top_not_2', className='col top_eu'),
-                #html.Div([
-                #    html.P("Some notes", className='small')
-                #], className='col top_eu placeholder'),
-            ],className='row')
-            ],
-            className='col top_perf_container'),
-
-
-    ],
-    className='row'),
-
-
-    ########## Second Row ##########
-    html.Div([
-
-
-        html.Div([
-            html.Div([
-                html.P("Some text here about the sliders")
-            ], className="notes"),
-            ],
-            className='col toprow_container'),
-
-    ],
-    className='row'),
 
 
 
@@ -464,12 +418,6 @@ def getSelectedCountry(country):
 
 
 @app.callback(
-    Output('title_top_year', 'children'),
-    Output('top_eu_1', 'children'),
-    Output('top_eu_2', 'children'),
-    Output('top_eu_3', 'children'),
-    Output('top_not_1', 'children'),
-    Output('top_not_2', 'children'),
     Output('top_bar', 'figure'),
     Output('eu_choro', 'figure'),
     Input('slider_years', 'value'),
@@ -543,13 +491,6 @@ def getTopPerforming(year_value):
 
 
     return [
-        year_value,
-        top_res_return[0],
-        top_res_return[1],
-        top_res_return[2],
-        top_res_return[3],
-        top_res_return[4],
-        #go.Figure(data=data_bar, layout=layout_bar)
         fig_bar,
         fig_map
         ]
