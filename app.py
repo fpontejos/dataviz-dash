@@ -17,7 +17,9 @@ import json
 
 external_stylesheets = [
     'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap',
-    'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'
+    'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
+    'https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap',
+    'https://fonts.googleapis.com/css2?family=Overlock:wght@900&display=swap'
 ]
 ####################################################################################################################
 ## Wrangle the data
@@ -257,15 +259,52 @@ app.layout = html.Div([
                 className='col-6'),
             html.Div([
                 html.Div([
-                        html.H4(["GDP of ", html.Span(id='country_selection')]),
-                        dcc.Graph(id='gdp_pct_ts', style={'width': '95%', 'margin': '0 auto'}),
+                        html.H4(["GDP Per Capita vs Percentage Renewables: ", html.Span(id='country_selection')]),
+                        dcc.Graph(id='gdp_pct_ts', style={'margin': '0'}),
+                        
+                        html.H4(["Percentage Renewables Time Series: ", html.Span(id='country_selection2')]),
+                        dcc.Graph(id='pct_ts', style={'margin': '0'}),
+                        
+
                 ], ),
                 ],
                 className='col ranking_container'),
 
+
         ],
         className='row'),
 
+    ], className='card'),
+
+    ################### References ###################
+    html.Div([
+        html.Div([
+            html.Div([
+                html.H5("NOVA IMS"),
+                html.Ul(
+                    [
+                    html.Li(["Miriam Hadidi Pereira ", html.Em("20210644")]),
+                    html.Li(["Beatriz Peres ", html.Em("20210910")]),
+                    html.Li(["Farina Pontejos ", html.Em("20210649")]),
+
+                    ]
+                )
+            ], className='col-4'),
+
+            html.Div([
+                html.H5("Sources"),
+                html.Ul(
+                    [
+                    html.Li([html.A("Share of energy from renewable sources until 2020",href="https://ec.europa.eu/eurostat/web/products-datasets/-/nrg_ind_cotd")]),
+                    html.Li([html.A("Energy flow - Sankey diagram data", href="https://ec.europa.eu/eurostat/web/products-datasets/-/nrg_bal_sd", )]),
+                    html.Li([html.A("Main GDP aggregates per capita", href="https://ec.europa.eu/eurostat/web/products-datasets/-/nama_10_gdp" )]),
+                    html.Li([html.A("Europe GeoJSON", href="https://github.com/leakyMirror/map-of-europe" )]),
+                    html.Li([html.A("Vector illustration", href="https://www.freepik.com/free-vector/landing-page-web-template-ecological-company_5083829.htm" )]),
+
+                    ]
+                )
+            ], className='col')
+        ], className='row'),    
     ], className='card'),
 
 
@@ -290,24 +329,17 @@ app.layout = html.Div([
 
 @app.callback(
     Output('country_selection', 'children'),
-    #Output('solar_value', 'children'),
-    #Output('wind_value', 'children'),
-    #Output('hydro_value', 'children'),
-    #Output('geotherm_value', 'children'),
-    #Output('bio_value', 'children'),
-    #Output('other_value', 'children'),
-
+    Output('country_selection2', 'children'),
     Output('sunburst_sources', 'figure'),
     Output('gdp_pct_ts', 'figure'),
+    Output('pct_ts', 'figure'),
 
     Input(dropdown_cc, 'value')
 )
 def getSelectedCountry(country):
     so_ = rs_data.loc[(rs_data['Country']==country) &( rs_data['Sunburst_Parent']=='Other Renewable')].sum()['Consumption in KTOE']
     
-
     s_ = rs_data.loc[(rs_data['Country']==country),['Sunburst_SIEC','Sunburst_Parent','Consumption in KTOE', 'Renewable']]
-    #print(s_['Renewable'].unique())
 
     gparent = pd.DataFrame(s_.groupby(['Sunburst_Parent', 'Renewable']).size()).reset_index().drop(columns=[0])
 
@@ -325,6 +357,10 @@ def getSelectedCountry(country):
                 [s_.loc[s_['Sunburst_Parent'] == _ ]['Consumption in KTOE'].sum() for _ in s_['Sunburst_Parent'].unique()] + \
                 s_['Consumption in KTOE'].tolist()
 
+    sun_layout = go.Layout(
+        #height=300,
+        paper_bgcolor=colors[1],
+        )
 
     fig_sun = go.Figure(
         go.Sunburst(
@@ -334,39 +370,78 @@ def getSelectedCountry(country):
             branchvalues="total",
             insidetextorientation='radial',
             marker=dict(colors=sun_colors)
-
-        )
+        ),
+        layout=sun_layout
     )
     fig_sun.update_layout(margin = dict(t=0, l=0, r=0, b=0))
 
+    ###################### GDP vs PCT ######################
 
-
-    #fig_gdp = go.Figure()
+    gdp_layout = go.Layout(
+        height=300,
+        paper_bgcolor=colors[1],
+        plot_bgcolor='#eef6f6',
+        )
     #Add traces
-    fig_gdp = go.Figure()
+    fig_gdp = go.Figure(layout=gdp_layout)
+
+    pct_ts_layout = go.Layout(
+        height=300,
+        paper_bgcolor=colors[1],
+        plot_bgcolor='#eef6f6',
+        yaxis_title="Percentage Renewables",
+
+        )
+    
+    fig_pct_ts = go.Figure(layout=pct_ts_layout)
+
+    ###################### Add Traces ######################
+
+
     for c_ in country_names:
         gdp_x = gdp_data.loc[gdp_data['Country']==c_, ts_years].T.iloc[:,0]
-        gdp_y = percent_timeseries.loc[percent_timeseries['Country']==c_, ts_years].T.iloc[:,0]
+        gdp_y = percent_timeseries.loc[percent_timeseries['Country']==c_, ['2020']].T.iloc[:,0]
+        pct_y = percent_timeseries.loc[percent_timeseries['Country']==c_, ts_years].T.iloc[:,0]
         if c_ != country:
             fig_gdp.add_trace(go.Scatter(x=gdp_x, y=gdp_y,
-                    text=ts_years,
+                    #text=ts_years,
                     mode='markers',
                     name=c_,
                     opacity=.25,
-                    marker=dict(color='#bbbbbb')
+                    marker=dict(color='#333333')
                     #visible='legendonly'
                     ))
             fig_gdp.update_traces(showlegend=False)
 
+            fig_pct_ts.add_trace(go.Scatter(
+                x=ts_years,
+                y=pct_y, 
+                mode='lines',
+                name=c_,
+                    opacity=.05,
+                    marker=dict(color='#575757')
+            ))
+            fig_pct_ts.update_traces(showlegend=False)
+
+
         if c_ == country:
             fig_gdp.add_trace(go.Scatter(x=gdp_x, y=gdp_y,
-                    text=ts_years,
-                    mode='lines+markers',
+                    text=[c_],
+                    mode='lines+markers+text',
                     name=c_,
-                    marker=dict(color=sun_colors[0])
+                    marker=dict(color='#0c7c59'),
+                    textposition="middle right"
+
+                    #marker=dict(color=sun_colors[0])
 
                     ))
-
+            fig_pct_ts.add_trace(go.Scatter(
+                x=ts_years,
+                y=pct_y, 
+                mode='lines',
+                name=c_,
+                marker=dict(color='#0c7c59'),
+            ))
 
 
 
@@ -377,8 +452,15 @@ def getSelectedCountry(country):
     )
 
     fig_gdp.update_layout(margin = dict(t=0, l=0, r=0, b=0))
+    fig_pct_ts.update_layout(margin = dict(t=0, l=0, r=0, b=0))
 
-    return [country, fig_sun, fig_gdp]
+
+    ###################### PCT Time Series ######################
+
+    
+
+
+    return [country, country, fig_sun, fig_gdp, fig_pct_ts]
 
 
 @app.callback(
@@ -429,7 +511,7 @@ def getTopPerforming(year_value):
     fig_bar.update_layout(dict(
                     yaxis=dict(range=[0,100]),
                     paper_bgcolor=colors[1],
-                    plot_bgcolor='#e9f6f6',
+                    plot_bgcolor='#eef6f6',
                     margin=dict(r=10, t=0, l=10)
 
                   ))
@@ -453,7 +535,7 @@ def getTopPerforming(year_value):
                     marker_opacity=0.5, marker_line_width=0,
                     featureidkey="properties.NAME"))
     fig_map.update_layout(mapbox_style="carto-positron",
-                  mapbox_zoom=2.5, mapbox_center = {"lat": 53, "lon": 5})
+                  mapbox_zoom=2.5, mapbox_center = {"lat": 53, "lon": 5}, paper_bgcolor=colors[1])
     fig_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     fig_map.update_traces(hovertemplate="%{location}: %{customdata}")
 
