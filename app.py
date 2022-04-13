@@ -446,7 +446,7 @@ def getSelectedCountry(country):
 
 
     fig_gdp.update_layout(
-        xaxis_title="GDP in Million Euros",
+        xaxis_title="GDP Per Capita in Euros",
         yaxis_title="Percentage Renewables",
         
     )
