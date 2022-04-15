@@ -13,3 +13,5 @@ In light of the current geopolitical issues and long term social and environment
 NOVA IMS
 
 Master of Data Science and Advanced Analytics
+
+See the dashboard: https://ims-dv-eured.herokuapp.com/
