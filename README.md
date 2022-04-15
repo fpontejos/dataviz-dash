@@ -4,11 +4,11 @@ In light of the current geopolitical issues and long term social and environment
 
 ## A Data Visualization Project by:
 
-- Miriam Hadidi Pereira 20210644
+- Miriam Hadidi Pereira *20210644*
 
-- Beatriz Peres 20210910
+- Beatriz Peres *20210910*
 
-- Farina Pontejos 20210649
+- Farina Pontejos *20210649*
 
 NOVA IMS
 
