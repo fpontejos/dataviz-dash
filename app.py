@@ -124,9 +124,20 @@ app.layout = html.Div([
         html.Div(className='hero-bg'),
 
         html.Div([
-            html.H1('Sources of Energy in European Countries'),
-            html.P("Where does it come from and where is it going?")
-        ],className='hero-title is-marginless'),
+            html.Div([
+                html.H1(['Renewables on the Rise:', html.Br(), 'a Look at Energy Sources in Europe']),
+                html.P(["""In light of the current geopolitical issues and long term social 
+                        and environmental trends affecting our generation, 
+                        we wanted to focus on the topic of the current state and direction 
+                        of the European energy mix. """]),
+                html.P([ "We wanted to answer the question: ",
+                        html.Em("How much of Europe’s energy comes from renewable sources?")])
+            ],className='hero-title is-marginless'),
+
+        ], className='col-8'),
+        html.Div([
+
+        ], className='col'),
 
     ],
     className='row hero'),
@@ -147,9 +158,16 @@ app.layout = html.Div([
             html.Div([
                 #html.H3("Countries' Performance"),
                 html.Br(),
-                html.P("Performance of each country for specific years. Year can be changed using the slider below."),
+                html.P("""
+                The EU has established a Renewable Energy Directive, 
+                which is a policy promoting the use of renewable energy sources among EU countries. 
+                In particular, it set a target of having 20% of its energy needs to be sourced from renewable energy 
+                by the year 2020. 
+                """),
+                html.P(html.Em("Which countries have met this goal?")),
+                html.P("The year can be changed using the slider below."),
                 html.Div([
-                    dcc.Graph(id='top_bar', style={'width': '95%', 'margin': '0 auto'}),
+                    dcc.Graph(id='top_bar'),
                     #html.Div([], id='top_bar', className='placeholder'),
                 ],className='row'),
                 ],
@@ -203,6 +221,8 @@ app.layout = html.Div([
                 
                 html.Div([
                     html.H4("Distribution of All Sources of Energy (2020)"),
+                    html.P(html.Em("What are the different energy sources being used?")),
+
                     html.Div([
                         dcc.Graph(id='sunburst_sources', style={'width': '95%', 'margin': '0 auto'}),
 
@@ -213,10 +233,13 @@ app.layout = html.Div([
                 className='col-6'),
             html.Div([
                 html.Div([
-                        html.H4(["GDP Per Capita vs Percentage Renewables: ", html.Span(id='country_selection')]),
+                        html.H4(["GDP Per Capita and Percentage of Energy From Renewables: ", html.Br(), html.Span(id='country_selection')]),
+                        html.P(html.Em("Do countries with higher GDP per capita have a higher percentage of renewables used?")),
                         dcc.Graph(id='gdp_pct_ts', style={'margin': '0'}),
                         
-                        html.H4(["Percentage Renewables Time Series: ", html.Span(id='country_selection2')]),
+
+                        html.H4(["Percentage of Energy From Renewables Over Time: ", html.Span(id='country_selection2')]),
+                        html.P(html.Em("Are European countries moving towards increased renewables use?")),
                         dcc.Graph(id='pct_ts', style={'margin': '0'}),
                         
 
@@ -243,21 +266,27 @@ app.layout = html.Div([
 
                     ]
                 )
-            ], className='col-4'),
+            ], className='col-4 authors'),
 
             html.Div([
-                html.H5("Sources"),
+                html.H5("Data Sources"),
                 html.Ul(
                     [
-                    html.Li([html.A("Share of energy from renewable sources until 2020",href="https://ec.europa.eu/eurostat/web/products-datasets/-/nrg_ind_cotd")]),
-                    html.Li([html.A("Energy flow - Sankey diagram data", href="https://ec.europa.eu/eurostat/web/products-datasets/-/nrg_bal_sd", )]),
-                    html.Li([html.A("Main GDP aggregates per capita", href="https://ec.europa.eu/eurostat/web/products-datasets/-/nama_10_gdp" )]),
+                    html.Li(["Calculation of overall target - details. (2022, February 1). Retrieved April 4, 2022, from ",
+                            html.A("https://ec.europa.eu/eurostat/web/products-datasets/-/nrg_ind_cotd", href="https://ec.europa.eu/eurostat/web/products-datasets/-/nrg_ind_cotd")]),
+                    html.Li(["Energy flow - Sankey diagram data. (2022, January 3). Retrieved April 4, 2022, from ", 
+                            html.A("https://ec.europa.eu/eurostat/web/products-datasets/-/nrg_bal_sd", href="https://ec.europa.eu/eurostat/web/products-datasets/-/nrg_bal_sd", )]),
+                    html.Li(["GDP and main components (output, expenditure and income). (2022, April 12). Retrieved April 12, 2022, from ",
+                            html.A("https://ec.europa.eu/eurostat/web/products-datasets/-/nama_10_gdp", href="https://ec.europa.eu/eurostat/web/products-datasets/-/nama_10_gdp" )]),
+                    ]),
+                html.H5("Assets Used"),
+                html.Ul([
                     html.Li([html.A("Europe GeoJSON", href="https://github.com/leakyMirror/map-of-europe" )]),
                     html.Li([html.A("Vector illustration", href="https://www.freepik.com/free-vector/landing-page-web-template-ecological-company_5083829.htm" )]),
 
                     ]
                 )
-            ], className='col')
+            ], className='col sources')
         ], className='row'),    
     ], className='card'),
 
@@ -344,7 +373,8 @@ def getSelectedCountry(country):
         paper_bgcolor=colors[1],
         plot_bgcolor='#eef6f6',
         yaxis_title="Percentage Renewables",
-
+        xaxis =  {'showgrid': False},
+        yaxis = {'showgrid': False}
         )
     
     fig_pct_ts = go.Figure(layout=pct_ts_layout)
@@ -406,8 +436,10 @@ def getSelectedCountry(country):
     )
 
     fig_gdp.update_layout(margin = dict(t=0, l=0, r=0, b=0))
-    fig_pct_ts.update_layout(margin = dict(t=0, l=0, r=0, b=0))
+    fig_gdp.update_yaxes(range=[0,100])
 
+    fig_pct_ts.update_layout(margin = dict(t=0, l=0, r=0, b=0))
+    fig_pct_ts.update_yaxes(range=[0,100])
 
     ###################### PCT Time Series ######################
 

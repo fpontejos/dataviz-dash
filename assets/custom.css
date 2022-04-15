@@ -46,7 +46,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1em 0;
 }
 .hero {
-    margin: -10px -20px; /*1em .25em 5em;*/
+    margin-top: -10px;
+    margin-right: -20px ; /*1em .25em 5em;*/
     /*border: 2px solid cyan;*/
     position: relative;
     display: flex;
@@ -54,12 +55,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero-title {
     /*border: 1px solid red;*/
-    padding: 4em 20px;
+    padding: 4em 0; ;
     margin: 0 auto;
     display: flex;
     width: 100%;
     flex-direction: column;
     /*text-align: center;*/
+    z-index: 200;
+}
+
+.hero-title * {
     z-index: 200;
 }
 
@@ -81,12 +86,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .top_container {
     z-index: 10;
-    margin-top: 8em;
+    margin-top: 2em;
 }
 
 #top_bar {
     border: 0px solid green;
     max-height: 20em;
+    margin: 0 auto;
+    width: 95%;
 }
 .toprow_container {
     display: flex;
@@ -287,6 +294,7 @@ Style input components
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 2em;
 }
 
 .country_profile_label {
@@ -311,4 +319,25 @@ Style input components
     padding-bottom: 2em;
     min-height: 300px;
     
+}
+.authors {
+}
+
+.sources {
+    position: relative;
+}
+.sources::after {
+    content: ' ';
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    display: flex;
+    right:0em;
+    bottom: 0em;
+    z-index: 20;
+    background-image: url('logo-preto.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    opacity: .35;
 }
