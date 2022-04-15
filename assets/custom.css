@@ -335,7 +335,7 @@ Style input components
     right:0em;
     bottom: 0em;
     z-index: 20;
-    background-image: url('logo-preto.png');
+    background-image: url('/assets/logo-preto.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
