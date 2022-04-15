@@ -109,6 +109,8 @@ slider_years = dcc.Slider(
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.css.config.serve_locally = True
+app.title = "Renewables on the Rise: a Look at Energy Sources in Europe"
+app._favicon = ('logo-preto.png')
 
 server = app.server
 
