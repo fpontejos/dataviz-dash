@@ -1,16 +1,12 @@
 import dash
-from dash import dash_table, html, dcc
+from dash import html, dcc
 
-#import dash_core_components as dcc
-#import dash_html_components as html
-from dash.dependencies import Input, Output, State
+from dash.dependencies import Input, Output
 
 import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
 
-
-import urllib.request as urllib
 import json
 
 
@@ -25,20 +21,19 @@ external_stylesheets = [
 ## Wrangle the data
 ####################################################################################################################
 
-data_path = 'https://raw.githubusercontent.com/fpontejos/dataviz-dash/main/data/'
-data_path2 = 'data/'
+data_path = 'data/'
 
 colors = ['#363537', '#fcfcfc', '#bee9e8', '#62b6cb', '#1b4965', '#ffef84', '#c3d37a', '#86b66f', '#0c7c59']
 
 sun_colors = ['#1b4965', '#D4D6B9', '#4F486B', '#824670', '#6C6293', '#32213A', '#c3d37a', '#86b66f', '#0c7c59', '#D4D6B9', '#EEC643']
 
-pct_data = pd.read_csv(data_path2 + 'renewables_percent_timeseries.csv')
+pct_data = pd.read_csv(data_path + 'renewables_percent_timeseries.csv')
 pct_data = pct_data.sort_values(by='Country')
 
 pct_data.loc[pct_data['Country']=='Czechia','Country'] = 'Czech Republic'
 
-response = urllib.urlopen(data_path + "europe.geojson")
-europe_json = json.loads(response.read())
+with open(data_path + "europe.geojson") as f:
+   europe_json = json.load(f)
 
 country_names = sorted([i for i in pct_data['Country'].unique()])
 
@@ -50,19 +45,19 @@ percent_timeseries_tot = pct_data.loc[pct_data['SIEC Code']=='TOTAL']\
                                  .reset_index(drop=True)
 
 
-gdp_data = pd.read_csv(data_path2 + 'gdp_data.csv')
+gdp_data = pd.read_csv(data_path + 'gdp_data.csv')
 gdp_data.loc[gdp_data['Country']=='Czechia','Country'] = 'Czech Republic'
 
 for yi in ts_years:
     percent_timeseries[yi] = round((100*percent_timeseries[yi] / percent_timeseries_tot[yi]), 2)
 
 
-rs_data = pd.read_csv(data_path2 + 'renewable_sources_2020.csv')
+rs_data = pd.read_csv(data_path + 'renewable_sources_2020.csv')
 rs_data.loc[rs_data['Country']=='Czechia','Country'] = 'Czech Republic'
 
-#print(rs_data.columns)
+
 rs_data.replace(np.nan, '', inplace=True)
-rs_country_names = country_names #[i for i in rs_data['Country'].unique()]
+rs_country_names = country_names
 
 ######################################################Functions##############################################################
 
@@ -158,7 +153,6 @@ app.layout = html.Div([
             html.Div([
 
             html.Div([
-                #html.H3("Countries' Performance"),
                 html.Br(),
                 html.P("""
                 The EU has established a Renewable Energy Directive, 
@@ -170,7 +164,6 @@ app.layout = html.Div([
                 html.P("The year can be changed using the slider below."),
                 html.Div([
                     dcc.Graph(id='top_bar'),
-                    #html.Div([], id='top_bar', className='placeholder'),
                 ],className='row'),
                 ],
             className='ranking_container'),
@@ -343,7 +336,6 @@ def getSelectedCountry(country):
                 s_['Consumption in KTOE'].tolist()
 
     sun_layout = go.Layout(
-        #height=300,
         paper_bgcolor=colors[1],
         )
 
@@ -390,12 +382,10 @@ def getSelectedCountry(country):
         pct_y = percent_timeseries.loc[percent_timeseries['Country']==c_, ts_years].T.iloc[:,0]
         if c_ != country:
             fig_gdp.add_trace(go.Scatter(x=gdp_x, y=gdp_y,
-                    #text=ts_years,
                     mode='markers',
                     name=c_,
                     opacity=.25,
                     marker=dict(color='#333333')
-                    #visible='legendonly'
                     ))
             fig_gdp.update_traces(showlegend=False)
 
@@ -417,9 +407,6 @@ def getSelectedCountry(country):
                     name=c_,
                     marker=dict(color='#0c7c59'),
                     textposition="middle right"
-
-                    #marker=dict(color=sun_colors[0])
-
                     ))
             fig_pct_ts.add_trace(go.Scatter(
                 x=ts_years,
