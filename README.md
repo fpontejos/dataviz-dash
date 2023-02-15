@@ -14,4 +14,4 @@ NOVA IMS
 
 Master of Data Science and Advanced Analytics
 
-See the dashboard: https://ims-dv-eured.herokuapp.com/
+See the dashboard: https://fp-dataviz-dash.onrender.com/
